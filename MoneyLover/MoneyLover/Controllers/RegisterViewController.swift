@@ -65,6 +65,8 @@ class RegisterViewController: UIViewController {
                 } else {
                     if userManager.addUser(email, password: password) {
                         presentAlertWithTitle("Success", message: "You have successfully registered")
+                        loginSegmentControl.selectedSegmentIndex = 1
+                        loginButton?.setTitle("Đăng nhập", forState: .Normal)
                     } else {
                         presentAlertWithTitle("Error", message: "Can't save user")
                     }

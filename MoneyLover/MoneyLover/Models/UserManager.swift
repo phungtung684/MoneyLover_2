@@ -38,4 +38,17 @@ class UserManager: NSObject {
         }
         return false
     }
+    
+    func addUserFromSocial(email: String) -> Bool {
+        if let user = dataStored.createRecordForEntity("User", inManagedObjectContext: managedObjectContext) as? User {
+            user.email = email
+            do {
+                try managedObjectContext.save()
+                return true
+            } catch {
+                return false
+            }
+        }
+        return false
+    }
 }

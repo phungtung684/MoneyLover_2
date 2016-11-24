@@ -12,6 +12,8 @@
 		0890DCEB1DE6C2BF007FD3B5 /* CheckValidateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCEA1DE6C2BF007FD3B5 /* CheckValidateTextField.swift */; };
 		0890DCED1DE6EF35007FD3B5 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCEC1DE6EF35007FD3B5 /* UserManager.swift */; };
 		142D3F531DE58C40007E2C77 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D3F521DE58C40007E2C77 /* SplashScreen.swift */; };
+		144FEF571DE6C13D0078BAB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 144FEF561DE6C13D0078BAB4 /* GoogleService-Info.plist */; };
+		144FEF5A1DE6C88E0078BAB4 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FEF591DE6C88E0078BAB4 /* LoadingIndicatorView.swift */; };
 		1459356A1DE674B6004BC748 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145935691DE674B6004BC748 /* RegisterViewController.swift */; };
 		1459356C1DE68A1D004BC748 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459356B1DE68A1D004BC748 /* CustomView.swift */; };
 		145935751DE68A82004BC748 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459356D1DE68A82004BC748 /* Category+CoreDataClass.swift */; };
@@ -28,6 +30,7 @@
 		14DA31361DE42048003D8390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DA31281DE41EF7003D8390 /* Assets.xcassets */; };
 		14DA31371DE4204D003D8390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DA312A1DE41EF7003D8390 /* LaunchScreen.storyboard */; };
 		14DA31381DE42051003D8390 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DA312C1DE41EF7003D8390 /* Login.storyboard */; };
+		63B5A25958366B30C7FBC38B /* Pods_MoneyLover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE78369883E11E8330BD0E1 /* Pods_MoneyLover.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		0890DCEA1DE6C2BF007FD3B5 /* CheckValidateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckValidateTextField.swift; sourceTree = "<group>"; };
 		0890DCEC1DE6EF35007FD3B5 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		142D3F521DE58C40007E2C77 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		144FEF561DE6C13D0078BAB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		144FEF581DE6C76C0078BAB4 /* MoneyLover.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoneyLover.entitlements; sourceTree = "<group>"; };
+		144FEF591DE6C88E0078BAB4 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		145935691DE674B6004BC748 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1459356B1DE68A1D004BC748 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		1459356D1DE68A82004BC748 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -54,6 +60,9 @@
 		14DA31281DE41EF7003D8390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14DA312B1DE41EF7003D8390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14DA312D1DE41EF7003D8390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		21C2614A347F59FD0DBA8BFB /* Pods-MoneyLover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLover.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyLover/Pods-MoneyLover.release.xcconfig"; sourceTree = "<group>"; };
+		8DDE7869D720B13C5232327D /* Pods-MoneyLover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLover.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyLover/Pods-MoneyLover.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE78369883E11E8330BD0E1 /* Pods_MoneyLover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyLover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B5A25958366B30C7FBC38B /* Pods_MoneyLover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +82,8 @@
 			children = (
 				14DA31081DE41B9D003D8390 /* MoneyLover */,
 				14DA31071DE41B9D003D8390 /* Products */,
+				926F298CC96A3E20B7EAACC9 /* Pods */,
+				4B854FA15A83D68AB11E7322 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +98,7 @@
 		14DA31081DE41B9D003D8390 /* MoneyLover */ = {
 			isa = PBXGroup;
 			children = (
+				144FEF581DE6C76C0078BAB4 /* MoneyLover.entitlements */,
 				14DA311F1DE41EF7003D8390 /* AppDelegate */,
 				14DA31211DE41EF7003D8390 /* Controllers */,
 				14DA31231DE41EF7003D8390 /* Models */,
@@ -94,6 +107,7 @@
 				14DA312E1DE41EF7003D8390 /* Utils */,
 				14DA312F1DE41EF7003D8390 /* Views */,
 				14DA31181DE41B9D003D8390 /* Info.plist */,
+				144FEF561DE6C13D0078BAB4 /* GoogleService-Info.plist */,
 			);
 			path = MoneyLover;
 			sourceTree = "<group>";
@@ -172,8 +186,26 @@
 		14DA312F1DE41EF7003D8390 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				144FEF591DE6C88E0078BAB4 /* LoadingIndicatorView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4B854FA15A83D68AB11E7322 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAE78369883E11E8330BD0E1 /* Pods_MoneyLover.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		926F298CC96A3E20B7EAACC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DDE7869D720B13C5232327D /* Pods-MoneyLover.debug.xcconfig */,
+				21C2614A347F59FD0DBA8BFB /* Pods-MoneyLover.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,10 +215,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14DA311B1DE41B9D003D8390 /* Build configuration list for PBXNativeTarget "MoneyLover" */;
 			buildPhases = (
+				F15172476F5B47E99C50CD0F /* [CP] Check Pods Manifest.lock */,
 				14DA31021DE41B9D003D8390 /* Sources */,
 				14DA31031DE41B9D003D8390 /* Frameworks */,
 				14DA31041DE41B9D003D8390 /* Resources */,
 				14DA311E1DE41DDF003D8390 /* ShellScript */,
+				384E9AD6881C8ACEDE8EC5A1 /* [CP] Embed Pods Frameworks */,
+				FAA880D784F89924CDD84EB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,6 +246,11 @@
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -238,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14DA31381DE42051003D8390 /* Login.storyboard in Resources */,
+				144FEF571DE6C13D0078BAB4 /* GoogleService-Info.plist in Resources */,
 				14DA31371DE4204D003D8390 /* LaunchScreen.storyboard in Resources */,
 				14DA31361DE42048003D8390 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +300,51 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		384E9AD6881C8ACEDE8EC5A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyLover/Pods-MoneyLover-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F15172476F5B47E99C50CD0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FAA880D784F89924CDD84EB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyLover/Pods-MoneyLover-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -276,6 +362,7 @@
 				1459357C1DE68A82004BC748 /* Wallet+CoreDataProperties.swift in Sources */,
 				0890DCE91DE6C1ED007FD3B5 /* DataStored.swift in Sources */,
 				14DA31311DE41EF7003D8390 /* LoginViewController.swift in Sources */,
+				144FEF5A1DE6C88E0078BAB4 /* LoadingIndicatorView.swift in Sources */,
 				145935751DE68A82004BC748 /* Category+CoreDataClass.swift in Sources */,
 				142D3F531DE58C40007E2C77 /* SplashScreen.swift in Sources */,
 				145935771DE68A82004BC748 /* Transaction+CoreDataClass.swift in Sources */,
@@ -404,10 +491,13 @@
 		};
 		14DA311C1DE41B9D003D8390 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DDE7869D720B13C5232327D /* Pods-MoneyLover.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoneyLover/MoneyLover.entitlements;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyLover/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Framgia.MoneyLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,10 +507,13 @@
 		};
 		14DA311D1DE41B9D003D8390 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C2614A347F59FD0DBA8BFB /* Pods-MoneyLover.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoneyLover/MoneyLover.entitlements;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyLover/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Framgia.MoneyLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
