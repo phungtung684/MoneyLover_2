@@ -27,21 +27,21 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNR-5E-KNt">
-                                        <rect key="frame" x="41.5" y="14" width="77" height="28"/>
+                                        <rect key="frame" x="42" y="14" width="77" height="28"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <state key="normal" title="Tháng trước">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-ub-ZB9">
-                                        <rect key="frame" x="251.5" y="14" width="58" height="28"/>
+                                        <rect key="frame" x="252" y="14" width="58" height="28"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <state key="normal" title="Tương lai">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBV-rZ-wJF">
-                                        <rect key="frame" x="148.5" y="15" width="65" height="28"/>
+                                        <rect key="frame" x="149" y="15" width="65" height="28"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <state key="normal" title="Tháng này">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,7 +101,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gxi-Zb-fVh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sổ giao dịch" image="ic_wallet" selectedImage="ic_wallet" id="u4Q-zf-K3L"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="s7D-xb-MrN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s7D-xb-MrN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -139,7 +139,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VHO-A3-Jtt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Báo cáo" image="ic_chart_pie" id="6OS-e5-q8m"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gQM-Ak-SRi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQM-Ak-SRi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -165,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkY-04-rUO">
-                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <rect key="frame" x="167" y="323" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -208,32 +208,13 @@
             </objects>
             <point key="canvasLocation" x="2184" y="2785"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Wlx-z2-U18">
-            <objects>
-                <viewController id="XiQ-Bg-p0b" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ads-Bw-Yli"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ye2-zn-WFQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Z1f-kH-2OS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="uPB-wb-2iJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MYQ-r8-N3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2184" y="3654"/>
-        </scene>
         <!--Lập kế hoạch-->
         <scene sceneID="S9p-tO-8Jl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fOw-Ri-XDf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Lập kế hoạch" image="ic_bk_budget" id="DEJ-Ng-7mh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cjU-2U-xw8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjU-2U-xw8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -254,7 +235,7 @@
                         <inset key="imageInsets" minX="0.0" minY="-16" maxX="0.0" maxY="16"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GaH-Sg-HCa">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GaH-Sg-HCa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -270,18 +251,47 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k70-7r-o2h" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mở rộng" image="ic_bk_option_menu" id="1Rb-CP-cCb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="L1N-7c-gxP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L1N-7c-gxP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="XiQ-Bg-p0b" kind="relationship" relationship="rootViewController" id="IBV-RN-AI8"/>
+                        <segue destination="Cgq-Fs-riD" kind="relationship" relationship="rootViewController" id="BoP-jj-gdv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pry-zB-Kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1393" y="3654"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="38C-nQ-M59">
+            <objects>
+                <tableViewController id="Cgq-Fs-riD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aoO-RI-OrJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellMR" id="UEm-r2-dRQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEm-r2-dRQ" id="sUD-fz-qcX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cgq-Fs-riD" id="7fL-jf-Xt5"/>
+                            <outlet property="delegate" destination="Cgq-Fs-riD" id="YUB-ps-eqx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4CT-Dt-W5P"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qiu-jV-dAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2919" y="3577"/>
         </scene>
     </scenes>
     <resources>
