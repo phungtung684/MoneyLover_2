@@ -10,6 +10,6 @@ import UIKit
 
 class ConfigCell: UITableViewCell {
 
-    func configCellWithContent(category: Category) {
+    func configCellWithContent(category: CategoryModel) {
     }
 }

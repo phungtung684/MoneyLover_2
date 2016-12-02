@@ -24,8 +24,8 @@ class ListEditCategoryViewController: UIViewController {
     }
     
     @objc private func addAction() {
-        if let addCategory = self.storyboard?.instantiateViewControllerWithIdentifier("AddCategoryViewController") as? AddCategoryViewController {
-            let navController = UINavigationController(rootViewController: addCategory)
+        if let addCategoryViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AddCategoryViewController") as? AddCategoryViewController {
+            let navController = UINavigationController(rootViewController: addCategoryViewController)
             self.presentViewController(navController, animated:true, completion: nil)
         }
     }
@@ -67,10 +67,23 @@ extension ListEditCategoryViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        if let detailCategory = self.storyboard?.instantiateViewControllerWithIdentifier("DetailCategoryViewController") as? DetailCategoryViewController {
+        if let detailCategoryViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailCategoryViewController") as? DetailCategoryViewController {
             let category = sectionData[indexPath.section].listCategory[indexPath.row]
-            detailCategory.category = category
-            self.navigationController?.pushViewController(detailCategory, animated: true)
+            detailCategoryViewController.category = category
+            detailCategoryViewController.delegate = self
+            detailCategoryViewController.indexPath = indexPath
+            self.navigationController?.pushViewController(detailCategoryViewController, animated: true)
+        }
+    }
+}
+
+extension ListEditCategoryViewController: DeleteCategoryDelegate {
+    func didDeleteCategory(indexPath: NSIndexPath?) {
+        if let indexPath = indexPath {
+            var listCategory = sectionData[indexPath.section].listCategory
+            listCategory.removeAtIndex(indexPath.row)
+            sectionData[indexPath.section].listCategory = listCategory
+            tableView?.reloadSections(NSIndexSet(index: indexPath.section), withRowAnimation: .None)
         }
     }
 }

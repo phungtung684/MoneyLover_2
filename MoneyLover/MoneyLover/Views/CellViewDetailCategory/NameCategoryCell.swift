@@ -14,11 +14,9 @@ class NameCategoryCell: ConfigCell {
         super.awakeFromNib()
     }
     
-    override func configCellWithContent(category: Category) {
+    override func configCellWithContent(category: CategoryModel) {
         self.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size: 25)
-        self.textLabel?.text = category.name
-        if let iconCategory = category.icon {
-            self.imageView?.image = UIImage(named: iconCategory)
-        }
+        self.textLabel?.text = category.nameCategory
+        self.imageView?.image = UIImage(named: category.iconCategory)
     }
 }
