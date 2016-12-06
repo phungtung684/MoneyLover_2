@@ -7,9 +7,11 @@
 //
 
 import UIKit
+
 protocol AddWalletTableViewControllerDelegate: class {
     func reloadData()
 }
+
 class AddWalletTableViewController: UITableViewController {
     
     @IBOutlet weak var nameWalletTextField: UITextField!
@@ -18,6 +20,7 @@ class AddWalletTableViewController: UITableViewController {
     var nameIcon = "icon_109"
     var walletManager = WalletManager()
     weak var delegate: AddWalletTableViewControllerDelegate?
+    var wallet: Wallet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,11 @@ class AddWalletTableViewController: UITableViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(imageTapped))
         iconImageView?.userInteractionEnabled = true
         iconImageView?.addGestureRecognizer(tapGestureRecognizer)
+        if wallet != nil {
+            nameWalletTextField?.text = wallet?.name
+            iconImageView.image = UIImage(named: wallet?.icon ?? "icon_109")
+            moneyTextField.text = "\(wallet?.amount ?? 0.0)"
+        }
     }
 
     @objc private func imageTapped() {
@@ -46,14 +54,29 @@ class AddWalletTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 1 {
             if indexPath.row == 0 {
-                if walletManager.checkWalletNameExits(nameWalletTextField.text ?? "") {
-                    self.presentAlertWithTitle(NSLocalizedString("LogoutConfirmTitle", comment: ""), message: NSLocalizedString("MessageAlertNameWalletExits", comment: ""))
-                } else {
-                    if walletManager.addWallet(WalletModel(name: nameWalletTextField.text ?? "", iconName: nameIcon, amount: Double(moneyTextField.text ?? "") ?? 0.0)) {
-                        self.delegate?.reloadData()
-                        self.navigationController?.popViewControllerAnimated(true)
+                if wallet == nil {
+                    if walletManager.checkWalletNameExits(nameWalletTextField.text ?? "") {
+                        self.presentAlertWithTitle(NSLocalizedString("LogoutConfirmTitle", comment: ""), message: NSLocalizedString("MessageAlertNameWalletExits", comment: ""))
                     } else {
-                        self.presentAlertWithTitle(NSLocalizedString("ErrorAlertTitle", comment: ""), message: NSLocalizedString("MessageAlertErrorAddWallet", comment: ""))
+                        if walletManager.addWallet(WalletModel(name: nameWalletTextField.text ?? "", iconName: nameIcon, amount: Double(moneyTextField.text ?? "") ?? 0.0)) {
+                            self.delegate?.reloadData()
+                            self.navigationController?.popViewControllerAnimated(true)
+                        } else {
+                            self.presentAlertWithTitle(NSLocalizedString("ErrorAlertTitle", comment: ""), message: NSLocalizedString("MessageAlertErrorAddWallet", comment: ""))
+                        }
+                    }
+                } else {
+                    if walletManager.checkEditWalletNameExits(nameWalletTextField.text ?? "") {
+                        self.presentAlertWithTitle(NSLocalizedString("LogoutConfirmTitle", comment: ""), message: NSLocalizedString("MessageAlertNameWalletExits", comment: ""))
+                    } else {
+                        if  walletManager.editWallet(wallet?.idWallet ?? "", walletModel: WalletModel(name: nameWalletTextField.text ?? "", iconName: nameIcon, amount: Double(moneyTextField.text ?? "") ?? 0.0)) {
+                            if let ChooseWalletTVC = self.storyboard?.instantiateViewControllerWithIdentifier("ChooseWalletTVC") as? ChooseWalletTableViewController {
+                                self.navigationController?.pushViewController(ChooseWalletTVC, animated: true)
+                            }
+                            
+                        } else {
+                            self.presentAlertWithTitle(NSLocalizedString("ErrorAlertTitle", comment: ""), message: NSLocalizedString("MessageAlertErrorAddWallet", comment: ""))
+                        }
                     }
                 }
             }
