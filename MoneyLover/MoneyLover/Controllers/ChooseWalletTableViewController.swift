@@ -10,7 +10,7 @@ import UIKit
 
 class ChooseWalletTableViewController: UITableViewController {
     
-    var dataWallet = [Wallet]()
+    var dataWallet = [WalletModel]()
     var dataStored = DataStored()
     
     var walletManager = WalletManager()
@@ -31,13 +31,13 @@ class ChooseWalletTableViewController: UITableViewController {
         if listWallet.count == 0 {
             for wallet in ListWalletAvalable().listWallet {
                 if let w = walletManager.addWalletAvailable(wallet) {
-                    dataWallet.append(w)
+                    dataWallet.append(WalletModel(wallet: w))
                 }
             }
         } else {
             for item in listWallet {
                 if let wallet = item as? Wallet {
-                    dataWallet.append(wallet)
+                    dataWallet.append(WalletModel(wallet: wallet))
                 }
             }
         }
@@ -59,11 +59,7 @@ class ChooseWalletTableViewController: UITableViewController {
         if let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? WalletTableViewCell {
             let wallet = dataWallet[indexPath.row]
             cell.walletNameLabel.text = wallet.name
-            if let iconImageName = wallet.icon {
-                cell.iconImageView.image = UIImage(named: iconImageName)
-            } else {
-                cell.iconImageView.image = UIImage(named: wallet.icon ?? "icon_109")
-            }
+            cell.iconImageView.image = UIImage(named: wallet.iconName)
             cell.moneyLabel.text = "\(wallet.amount ?? 0.0)"
             return cell
         }
@@ -83,6 +79,7 @@ class ChooseWalletTableViewController: UITableViewController {
         if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
             addWalletVC.delegate  = self
             addWalletVC.wallet = dataWallet[indexPath.row]
+            addWalletVC.indexPath = indexPath
             self.navigationController?.pushViewController(addWalletVC, animated: true)
         }
     }
@@ -95,5 +92,14 @@ extension ChooseWalletTableViewController: AddWalletTableViewControllerDelegate 
             self.getdataFromDB()
             self.tableView.reloadData()
         })
+    }
+}
+
+extension ChooseWalletTableViewController: DeleteWalletDelegate {
+    func didDeleteWallet(indexPath: NSIndexPath?) {
+        if let indexPathDelete = indexPath {
+            dataWallet.removeAtIndex(indexPathDelete.row)
+            self.tableView.reloadData()
+        }
     }
 }

@@ -23,10 +23,7 @@ class WalletManager {
     
     func checkEditWalletNameExits(name: String) -> Bool {
         let listWalletName = dataStored.fetchAttributePredicate("Wallet", attribute: "name", stringPredicate: name, inManagedObjectContext: managedObjectContext)
-        print(listWalletName.count)
-        if listWalletName.count == 0 {
-            return false
-        } else if listWalletName.count == 2 {
+        if listWalletName.count <= 1 {
             return false
         }
         return true
@@ -64,8 +61,8 @@ class WalletManager {
         return false
     }
     
-    func editWallet(idWallet: String, walletModel: WalletModel) -> Bool {
-        let listWallet = dataStored.fetchAttributePredicate("Wallet", attribute: "idWallet", stringPredicate: idWallet, inManagedObjectContext: managedObjectContext)
+    func editWallet(walletModel: WalletModel) -> Bool {
+        let listWallet = dataStored.fetchAttributePredicate("Wallet", attribute: "idWallet", stringPredicate: walletModel.idWallet, inManagedObjectContext: managedObjectContext)
         if let wallet = listWallet.first as? Wallet {
             wallet.name = walletModel.name
             wallet.icon = walletModel.iconName
@@ -79,5 +76,20 @@ class WalletManager {
         }
         return false
     }
-
+    
+    func deleteWallet(idWallet: String) -> Bool {
+        let listWallet = dataStored.fetchAttributePredicate("Wallet", attribute: "idWallet", stringPredicate: idWallet, inManagedObjectContext: managedObjectContext)
+        if listWallet.count == 1 {
+            if let wallet = listWallet.first as? Wallet {
+                managedObjectContext.deleteObject(wallet)
+                do {
+                    try managedObjectContext.save()
+                    return true
+                } catch {
+                    return false
+                }
+            }
+        }
+        return false
+    }
 }
