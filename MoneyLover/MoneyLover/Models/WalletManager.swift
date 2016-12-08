@@ -21,6 +21,17 @@ class WalletManager {
         return true
     }
     
+    func checkEditWalletNameExits(name: String) -> Bool {
+        let listWalletName = dataStored.fetchAttributePredicate("Wallet", attribute: "name", stringPredicate: name, inManagedObjectContext: managedObjectContext)
+        print(listWalletName.count)
+        if listWalletName.count == 0 {
+            return false
+        } else if listWalletName.count == 2 {
+            return false
+        }
+        return true
+    }
+    
     func addWalletAvailable(walletModel: WalletModel) -> Wallet? {
         if let wallet = dataStored.createRecordForEntity("Wallet", inManagedObjectContext: managedObjectContext) as? Wallet {
             wallet.name = walletModel.name
@@ -53,5 +64,20 @@ class WalletManager {
         return false
     }
     
+    func editWallet(idWallet: String, walletModel: WalletModel) -> Bool {
+        let listWallet = dataStored.fetchAttributePredicate("Wallet", attribute: "idWallet", stringPredicate: idWallet, inManagedObjectContext: managedObjectContext)
+        if let wallet = listWallet.first as? Wallet {
+            wallet.name = walletModel.name
+            wallet.icon = walletModel.iconName
+            wallet.amount = walletModel.amount
+            do {
+                try managedObjectContext.save()
+                return true
+            } catch {
+                return false
+            }
+        }
+        return false
+    }
 
 }

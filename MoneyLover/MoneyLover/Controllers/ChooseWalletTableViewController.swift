@@ -44,9 +44,9 @@ class ChooseWalletTableViewController: UITableViewController {
     }
     
     @IBAction func addAction(sender: AnyObject) {
-        if let addWallet = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
-            addWallet.delegate = self
-            self.navigationController?.pushViewController(addWallet, animated: true)
+        if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
+            addWalletVC.delegate = self
+            self.navigationController?.pushViewController(addWalletVC, animated: true)
         }
     }
     
@@ -70,16 +70,21 @@ class ChooseWalletTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.selected = false
-    }
-    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return NSLocalizedString("HeaderTitleChooseWallet", comment: "")
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+        if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
+            addWalletVC.delegate  = self
+            addWalletVC.wallet = dataWallet[indexPath.row]
+            self.navigationController?.pushViewController(addWalletVC, animated: true)
+        }
     }
 }
 
