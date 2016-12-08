@@ -30,4 +30,8 @@ extension NSDate {
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.stringFromDate(self)
     }
+    
+    func getFormatDate() -> String {
+        return "\(self.weekDay), \(self.day) \(self.month) \(self.year)"
+    }
 }
