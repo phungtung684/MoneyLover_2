@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08317B851DF90EC1005617F6 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08317B831DF90EC1005617F6 /* NoteViewController.swift */; };
 		08317B881DF9163B005617F6 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08317B871DF9163B005617F6 /* DateViewController.swift */; };
+		08317B8A1DF93501005617F6 /* ChooseLocationViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08317B891DF93501005617F6 /* ChooseLocationViewcontroller.swift */; };
+		08317B8C1DF944AF005617F6 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08317B8B1DF944AF005617F6 /* LocationSearchTable.swift */; };
 		0842C0BB1DF665B200CD805A /* ConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C0BA1DF665B200CD805A /* ConfigCell.swift */; };
 		0842C0C41DF69A2C00CD805A /* AddTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0842C0C31DF69A2C00CD805A /* AddTransaction.storyboard */; };
 		084471EA1DF4F91B00F80D46 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084471E91DF4F91B00F80D46 /* CategoryModel.swift */; };
@@ -21,6 +23,7 @@
 		08599B7E1DF17E55003629F8 /* ListEditCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08599B7D1DF17E55003629F8 /* ListEditCategoryViewController.swift */; };
 		08601B1B1DEEC692004EF0F3 /* ShowIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08601B1A1DEEC692004EF0F3 /* ShowIconViewController.swift */; };
 		08601B1D1DEED0D8004EF0F3 /* ChooseIconColectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08601B1C1DEED0D8004EF0F3 /* ChooseIconColectionViewCell.swift */; };
+		0873F6CA1DFA59AC00BA5D52 /* LocationSearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0873F6C91DFA59AC00BA5D52 /* LocationSearchTableCell.swift */; };
 		0890DCE71DE6C1AB007FD3B5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCE61DE6C1AB007FD3B5 /* CoreDataManager.swift */; };
 		0890DCE91DE6C1ED007FD3B5 /* DataStored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCE81DE6C1ED007FD3B5 /* DataStored.swift */; };
 		0890DCEB1DE6C2BF007FD3B5 /* CheckValidateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCEA1DE6C2BF007FD3B5 /* CheckValidateTextField.swift */; };
@@ -76,6 +79,8 @@
 /* Begin PBXFileReference section */
 		08317B831DF90EC1005617F6 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		08317B871DF9163B005617F6 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		08317B891DF93501005617F6 /* ChooseLocationViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLocationViewcontroller.swift; sourceTree = "<group>"; };
+		08317B8B1DF944AF005617F6 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		0842C0BA1DF665B200CD805A /* ConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigCell.swift; sourceTree = "<group>"; };
 		0842C0C31DF69A2C00CD805A /* AddTransaction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTransaction.storyboard; sourceTree = "<group>"; };
 		084471E91DF4F91B00F80D46 /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 		08599B7D1DF17E55003629F8 /* ListEditCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEditCategoryViewController.swift; sourceTree = "<group>"; };
 		08601B1A1DEEC692004EF0F3 /* ShowIconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowIconViewController.swift; sourceTree = "<group>"; };
 		08601B1C1DEED0D8004EF0F3 /* ChooseIconColectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseIconColectionViewCell.swift; sourceTree = "<group>"; };
+		0873F6C91DFA59AC00BA5D52 /* LocationSearchTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableCell.swift; sourceTree = "<group>"; };
 		0890DCE61DE6C1AB007FD3B5 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0890DCE81DE6C1ED007FD3B5 /* DataStored.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStored.swift; sourceTree = "<group>"; };
 		0890DCEA1DE6C2BF007FD3B5 /* CheckValidateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckValidateTextField.swift; sourceTree = "<group>"; };
@@ -236,6 +242,8 @@
 				084471EF1DF503C100F80D46 /* DetailCategoryViewController.swift */,
 				08317B831DF90EC1005617F6 /* NoteViewController.swift */,
 				08317B871DF9163B005617F6 /* DateViewController.swift */,
+				08317B891DF93501005617F6 /* ChooseLocationViewcontroller.swift */,
+				08317B8B1DF944AF005617F6 /* LocationSearchTable.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 				146D727E1DED19B300ED05F7 /* HeaderTransactionSection.xib */,
 				08601B1C1DEED0D8004EF0F3 /* ChooseIconColectionViewCell.swift */,
 				142B306D1DF5F06000BBBEA6 /* WalletTableViewCell.swift */,
+				0873F6C91DFA59AC00BA5D52 /* LocationSearchTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,7 +388,6 @@
 				TargetAttributes = {
 					14DA31051DE41B9D003D8390 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5K84G7UAYU;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -511,6 +519,7 @@
 				146D727D1DED197000ED05F7 /* HeaderTransactionSection.swift in Sources */,
 				146D72761DED116500ED05F7 /* OverViewTableViewCell.swift in Sources */,
 				0890DCEB1DE6C2BF007FD3B5 /* CheckValidateTextField.swift in Sources */,
+				08317B8C1DF944AF005617F6 /* LocationSearchTable.swift in Sources */,
 				08317B881DF9163B005617F6 /* DateViewController.swift in Sources */,
 				08F652A01DED73B6008A116D /* ShowCategoryViewController.swift in Sources */,
 				0890DCE71DE6C1AB007FD3B5 /* CoreDataManager.swift in Sources */,
@@ -525,6 +534,7 @@
 				0890DCE91DE6C1ED007FD3B5 /* DataStored.swift in Sources */,
 				084471EE1DF5036E00F80D46 /* DataDetailCategory.swift in Sources */,
 				14DA31311DE41EF7003D8390 /* LoginViewController.swift in Sources */,
+				0873F6CA1DFA59AC00BA5D52 /* LocationSearchTableCell.swift in Sources */,
 				084471EA1DF4F91B00F80D46 /* CategoryModel.swift in Sources */,
 				143BD1021DE7399D00764D2F /* TransactionsViewController.swift in Sources */,
 				1418E7A71DF56D6A00B0300C /* AccountTableViewController.swift in Sources */,
@@ -539,6 +549,7 @@
 				08599B7A1DF12733003629F8 /* CategoryManager.swift in Sources */,
 				14DA31301DE41EF7003D8390 /* AppDelegate.swift in Sources */,
 				089491611DEC122600619E11 /* ViewAddTransaction.swift in Sources */,
+				08317B8A1DF93501005617F6 /* ChooseLocationViewcontroller.swift in Sources */,
 				1459356A1DE674B6004BC748 /* RegisterViewController.swift in Sources */,
 				145935791DE68A82004BC748 /* User+CoreDataClass.swift in Sources */,
 				1461FC061DF51E13006F02E0 /* ChooseWalletTableViewController.swift in Sources */,
@@ -636,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -682,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -699,9 +710,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MoneyLover/MoneyLover.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5K84G7UAYU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyLover/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Framgia.MoneyLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -719,9 +730,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MoneyLover/MoneyLover.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5K84G7UAYU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyLover/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Framgia.MoneyLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
