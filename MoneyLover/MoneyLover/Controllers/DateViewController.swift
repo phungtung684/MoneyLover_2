@@ -8,13 +8,27 @@
 
 import UIKit
 
+protocol ChooseDateDelegate: class {
+    func didChooseDate(date: NSDate)
+}
+
 class DateViewController: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    weak var delegate: ChooseDateDelegate?
+    var dateCurrent: NSDate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker?.datePickerMode = UIDatePickerMode.Date
+        if let dateCurrent = dateCurrent {
+            datePicker?.date = dateCurrent
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    @IBAction func chooseDate(sender: AnyObject) {
+        if let sender = sender as? UIDatePicker {
+            self.delegate?.didChooseDate(sender.date)
+        }
     }
 }

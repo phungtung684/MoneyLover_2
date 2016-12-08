@@ -103,7 +103,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDq-wg-rVh">
-                                                    <rect key="frame" x="71" y="13" width="228" height="48"/>
+                                                    <rect key="frame" x="71" y="13" width="228.5" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="9fs-Mz-ROt"/>
                                                     </constraints>
@@ -132,7 +132,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIu-7l-vo5">
-                                                    <rect key="frame" x="62" y="6" width="228" height="32"/>
+                                                    <rect key="frame" x="62" y="6" width="228.5" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="npT-VL-dsA"/>
                                                     </constraints>
@@ -168,7 +168,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYl-0y-ngW">
-                                                    <rect key="frame" x="62" y="5" width="228" height="32"/>
+                                                    <rect key="frame" x="62" y="5" width="228.5" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="S7k-JT-bjU"/>
                                                     </constraints>
@@ -192,6 +192,9 @@
                                                 <constraint firstItem="QYl-0y-ngW" firstAttribute="centerY" secondItem="x7E-Jd-bM7" secondAttribute="centerY" id="uhC-28-JNp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yn1-Po-tk9" kind="show" identifier="DateViewController" id="sy4-xs-f5f"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="1VC-FH-JiX">
                                         <rect key="frame" x="0.0" y="363" width="375" height="44"/>
@@ -201,7 +204,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S6-Ja-92Z">
-                                                    <rect key="frame" x="62" y="5" width="228" height="32"/>
+                                                    <rect key="frame" x="62" y="5" width="228.5" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="kOu-sF-XgD"/>
                                                     </constraints>
@@ -250,7 +253,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaJ-Om-njU">
-                                                    <rect key="frame" x="62" y="6" width="228" height="32"/>
+                                                    <rect key="frame" x="62" y="6" width="228.5" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="9m2-ZU-vi7"/>
                                                     </constraints>
@@ -359,7 +362,7 @@
         <!--Date View Controller-->
         <scene sceneID="f6u-qs-VqC">
             <objects>
-                <viewController storyboardIdentifier="DateViewController" id="yn1-Po-tk9" customClass="DateViewController" customModule="MoneyLover" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yn1-Po-tk9" customClass="DateViewController" customModule="MoneyLover" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pxy-l6-bBk"/>
                         <viewControllerLayoutGuide type="bottom" id="gt5-1c-NwZ"/>
@@ -374,7 +377,7 @@
                                     <!--2016-12-05 16:34:50 +0000-->
                                 </date>
                                 <connections>
-                                    <action selector="chooseDate:" destination="yn1-Po-tk9" eventType="valueChanged" id="gRa-fL-kxQ"/>
+                                    <action selector="chooseDate:" destination="yn1-Po-tk9" eventType="valueChanged" id="BKL-DO-KuE"/>
                                 </connections>
                             </datePicker>
                         </subviews>
@@ -385,7 +388,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="GHU-tU-dHI" id="ea1-tm-Owv"/>
+                        <outlet property="datePicker" destination="GHU-tU-dHI" id="NNY-Jm-WAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPS-dF-Nel" userLabel="First Responder" sceneMemberID="firstResponder"/>
