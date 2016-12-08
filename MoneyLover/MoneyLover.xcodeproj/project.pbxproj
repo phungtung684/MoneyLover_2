@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0842C0BB1DF665B200CD805A /* ConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842C0BA1DF665B200CD805A /* ConfigCell.swift */; };
+		0842C0C41DF69A2C00CD805A /* AddTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0842C0C31DF69A2C00CD805A /* AddTransaction.storyboard */; };
 		084471EA1DF4F91B00F80D46 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084471E91DF4F91B00F80D46 /* CategoryModel.swift */; };
 		084471EC1DF5035F00F80D46 /* SectionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084471EB1DF5035F00F80D46 /* SectionsData.swift */; };
 		084471EE1DF5036E00F80D46 /* DataDetailCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084471ED1DF5036E00F80D46 /* DataDetailCategory.swift */; };
@@ -22,7 +23,6 @@
 		0890DCE91DE6C1ED007FD3B5 /* DataStored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCE81DE6C1ED007FD3B5 /* DataStored.swift */; };
 		0890DCEB1DE6C2BF007FD3B5 /* CheckValidateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCEA1DE6C2BF007FD3B5 /* CheckValidateTextField.swift */; };
 		0890DCED1DE6EF35007FD3B5 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890DCEC1DE6EF35007FD3B5 /* UserManager.swift */; };
-		089491571DEBD35A00619E11 /* AddTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089491561DEBD35A00619E11 /* AddTransaction.storyboard */; };
 		089491591DEBD3BA00619E11 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089491581DEBD3BA00619E11 /* AddTransactionViewController.swift */; };
 		089491611DEC122600619E11 /* ViewAddTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089491601DEC122600619E11 /* ViewAddTransaction.swift */; };
 		089491631DEC28F800619E11 /* CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089491621DEC28F800619E11 /* CustomDate.swift */; };
@@ -80,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		0842C0BA1DF665B200CD805A /* ConfigCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigCell.swift; sourceTree = "<group>"; };
+		0842C0C31DF69A2C00CD805A /* AddTransaction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTransaction.storyboard; sourceTree = "<group>"; };
 		084471E91DF4F91B00F80D46 /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		084471EB1DF5035F00F80D46 /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
 		084471ED1DF5036E00F80D46 /* DataDetailCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDetailCategory.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		0890DCE81DE6C1ED007FD3B5 /* DataStored.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStored.swift; sourceTree = "<group>"; };
 		0890DCEA1DE6C2BF007FD3B5 /* CheckValidateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckValidateTextField.swift; sourceTree = "<group>"; };
 		0890DCEC1DE6EF35007FD3B5 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		089491561DEBD35A00619E11 /* AddTransaction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTransaction.storyboard; sourceTree = "<group>"; };
 		089491581DEBD3BA00619E11 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		089491601DEC122600619E11 /* ViewAddTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAddTransaction.swift; sourceTree = "<group>"; };
 		089491621DEC28F800619E11 /* CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDate.swift; sourceTree = "<group>"; };
@@ -255,8 +255,8 @@
 				145FAB301DF1504000D71E9B /* ChangePasswordTableViewController.swift */,
 				08599B7D1DF17E55003629F8 /* ListEditCategoryViewController.swift */,
 				1461FC051DF51E13006F02E0 /* ChooseWalletTableViewController.swift */,
-				1418E79E1DF56A3500B0300C /* AddWalletTableViewController.swift */,
 				1418E7A61DF56D6A00B0300C /* AccountTableViewController.swift */,
+				1418E79E1DF56A3500B0300C /* AddWalletTableViewController.swift */,
 				084471EF1DF503C100F80D46 /* DetailCategoryViewController.swift */,
 			);
 			path = Controllers;
@@ -313,8 +313,8 @@
 			children = (
 				14DA312A1DE41EF7003D8390 /* LaunchScreen.storyboard */,
 				14DA312C1DE41EF7003D8390 /* Login.storyboard */,
-				089491561DEBD35A00619E11 /* AddTransaction.storyboard */,
 				1418E7A21DF56B8900B0300C /* Main.storyboard */,
+				0842C0C31DF69A2C00CD805A /* AddTransaction.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -437,12 +437,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				089491571DEBD35A00619E11 /* AddTransaction.storyboard in Resources */,
 				14DA31381DE42051003D8390 /* Login.storyboard in Resources */,
 				146D727F1DED19B300ED05F7 /* HeaderTransactionSection.xib in Resources */,
 				1418E7A01DF56B8900B0300C /* Main.storyboard in Resources */,
 				144FEF571DE6C13D0078BAB4 /* GoogleService-Info.plist in Resources */,
 				1461FBFF1DF4FC70006F02E0 /* Localizable.strings in Resources */,
+				0842C0C41DF69A2C00CD805A /* AddTransaction.storyboard in Resources */,
 				14DA31371DE4204D003D8390 /* LaunchScreen.storyboard in Resources */,
 				146D727B1DED194000ED05F7 /* TransactionTableViewCell.xib in Resources */,
 				146D72771DED116500ED05F7 /* OverViewTableViewCell.xib in Resources */,

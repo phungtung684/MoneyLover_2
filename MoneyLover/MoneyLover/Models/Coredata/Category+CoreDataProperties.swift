@@ -16,21 +16,4 @@ extension Category {
     @NSManaged var type: NSNumber?
     @NSManaged var icon: String?
     @NSManaged var transactionWithCategory: NSSet?
-    
-    func getTypeString() -> String {
-        if let typeCategory = type, let nameCategory = name {
-            if typeCategory == 0 {
-                if nameCategory == "Repayment" || nameCategory == "Loan" {
-                    return "Expense"
-                } else {
-                    return "Income"
-                }
-            } else if typeCategory == 1 {
-                return "Expense"
-            } else {
-                return "Income"
-            }
-        }
-        return ""
-    }
 }

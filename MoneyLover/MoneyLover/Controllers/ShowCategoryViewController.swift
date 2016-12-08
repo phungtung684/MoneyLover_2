@@ -14,12 +14,12 @@ class ShowCategoryViewController: UIViewController {
     @IBOutlet weak var chooseTypeSegmentedControl: UISegmentedControl!
     var dataStored = DataStored()
     lazy var managedObjectContext = CoreDataManager().managedObjectContext
-    var dataCategory = [Category]()
+    var dataCategory = [CategoryModel]()
     var rightbutton = UIBarButtonItem()
     let cellIdentifier = "Cell"
     var categoryManager = CategoryManager()
     var listCategoryAvailable = ListCategoryAvailable()
-    var dictCategory = [0: [Category](), 1: [Category](), 2: [Category]()]
+    var dictCategory = [0: [CategoryModel](), 1: [CategoryModel](), 2: [CategoryModel]()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,25 +32,29 @@ class ShowCategoryViewController: UIViewController {
         let listCategory = dataStored.fetchRecordsForEntity("Category", inManagedObjectContext: managedObjectContext)
         if listCategory.count == 0 {
             for category in listCategoryAvailable.listCategory {
-                if let category = categoryManager.addCategoryAvailale(category), let typeCategory = category.type {
-                    if typeCategory == 1 {
-                        dictCategory[1]?.append(category)
-                    } else if typeCategory == 0 {
-                        dictCategory[0]?.append(category)
-                    } else {
-                        dictCategory[2]?.append(category)
+                if let category = categoryManager.addCategoryAvailale(category) {
+                    if let typeCategory = category.type, let nameCategory = category.name, let iconCategory = category.icon, let idCategory = category.idCategory {
+                        if typeCategory == 1 {
+                            dictCategory[1]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.expense, iconCategory: iconCategory, idCategory: idCategory.integerValue))
+                        } else if typeCategory == 0 {
+                            dictCategory[0]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.deptLoan, iconCategory: iconCategory, idCategory: idCategory.integerValue))
+                        } else {
+                            dictCategory[2]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.income, iconCategory: iconCategory, idCategory: idCategory.integerValue))
+                        }
                     }
                 }
             }
         } else {
-            for categories in listCategory {
-                if let category = categories as? Category, let typeCategory = category.type {
-                    if typeCategory == 1 {
-                        dictCategory[1]?.append(category)
-                    } else if typeCategory == 0 {
-                        dictCategory[0]?.append(category)
-                    } else {
-                        dictCategory[2]?.append(category)
+            if let listCategory = listCategory as? [Category] {
+                for category in listCategory {
+                    if let typeCategory = category.type, let nameCategory = category.name, let iconCategory = category.icon, let idCategory = category.idCategory {
+                        if typeCategory == 1 {
+                            dictCategory[1]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.expense, iconCategory: iconCategory, idCategory: idCategory.integerValue))
+                        } else if typeCategory == 0 {
+                            dictCategory[0]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.deptLoan, iconCategory: iconCategory, idCategory: idCategory.integerValue))
+                        } else {
+                            dictCategory[2]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.income, iconCategory: iconCategory, idCategory: idCategory.integerValue))
+                        }
                     }
                 }
             }
@@ -62,15 +66,11 @@ class ShowCategoryViewController: UIViewController {
     }
     
     @objc private func editAction() {
-        if let listEdit = self.storyboard?.instantiateViewControllerWithIdentifier("ListEditCategoryViewController") as? ListEditCategoryViewController {
+        if let listEditCategoryViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ListEditCategoryViewController") as? ListEditCategoryViewController {
             let section = SectionsData()
-            listEdit.sectionData.appendContentsOf(section.getSectionsFromData(dictCategory))
-            self.navigationController?.pushViewController(listEdit, animated: true)
+            listEditCategoryViewController.sectionData.appendContentsOf(section.getSectionsFromData(dictCategory))
+            self.navigationController?.pushViewController(listEditCategoryViewController, animated: true)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
 
@@ -79,16 +79,16 @@ extension ShowCategoryViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let typeCategory = chooseTypeSegmentedControl?.selectedSegmentIndex {
             if typeCategory == 0 {
-                if let listDeptLoan = dictCategory[0] {
-                    dataCategory = listDeptLoan
+                if let listIncome = dictCategory[2] {
+                    dataCategory = listIncome
                 }
             } else if chooseTypeSegmentedControl?.selectedSegmentIndex == 1 {
                 if let listExpense = dictCategory[1] {
                     dataCategory = listExpense
                 }
             } else {
-                if let listIncome = dictCategory[2] {
-                    dataCategory = listIncome
+                if let listDeptLoan = dictCategory[0] {
+                    dataCategory = listDeptLoan
                 }
             }
         }
@@ -113,5 +113,11 @@ extension ShowCategoryViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+}
+
+extension ShowCategoryViewController: SaveCategoryDelegate {
+    func didSaveCategory(category: CategoryModel) {
+        self.tableView?.reloadData()
     }
 }

@@ -14,7 +14,7 @@ class TypeCategoryCell: ConfigCell {
         super.awakeFromNib()
     }
     
-    override func configCellWithContent(category: Category) {
+    override func configCellWithContent(category: CategoryModel) {
         self.textLabel?.text = category.getTypeString()
         self.imageView?.image = UIImage(named: "ic_income_expense")
     }
