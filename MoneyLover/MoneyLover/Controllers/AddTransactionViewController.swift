@@ -43,6 +43,11 @@ class AddTransactionViewController: UITableViewController {
                 noteViewController.delegate = self
                 noteViewController.noteCurrent = noteCurrent
             }
+        } else if segue.identifier == "DateViewController" {
+            if let dateViewController = segue.destinationViewController as? DateViewController {
+                dateViewController.delegate = self
+                dateViewController.dateCurrent = dateCurrent
+            }
         }
     }
 }
@@ -58,5 +63,12 @@ extension AddTransactionViewController: DataNoteDelegate {
             self.noteLabel?.textColor = UIColor.blackColor()
             self.noteLabel?.text = string
         }
+    }
+}
+
+extension AddTransactionViewController: ChooseDateDelegate {
+    func didChooseDate(date: NSDate) {
+        self.dateCurrent = date
+        self.dateLabel?.text = date.getFormatDate()
     }
 }
