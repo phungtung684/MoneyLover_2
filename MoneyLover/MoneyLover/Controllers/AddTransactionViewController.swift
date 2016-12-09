@@ -10,6 +10,7 @@ import UIKit
 
 class AddTransactionViewController: UITableViewController {
     
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     var noteCurrent: String?
@@ -48,7 +49,18 @@ class AddTransactionViewController: UITableViewController {
                 dateViewController.delegate = self
                 dateViewController.dateCurrent = dateCurrent
             }
+        } else if segue.identifier == "ChooseLocationViewcontroller" {
+            if let chooseLocationViewcontroller = segue.destinationViewController as? ChooseLocationViewcontroller {
+                chooseLocationViewcontroller.delegate = self
+            }
         }
+    }
+}
+
+extension AddTransactionViewController: ChooseLocationDelegate {
+    func didChooseLocation(namePlace: String) {
+        locationLabel?.text = namePlace
+        print(namePlace)
     }
 }
 
