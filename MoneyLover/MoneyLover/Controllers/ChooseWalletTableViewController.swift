@@ -12,7 +12,6 @@ class ChooseWalletTableViewController: UITableViewController {
     
     var dataWallet = [WalletModel]()
     var dataStored = DataStored()
-    
     var walletManager = WalletManager()
     lazy var managedObjectContext = CoreDataManager().managedObjectContext
     

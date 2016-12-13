@@ -39,7 +39,6 @@ class AddCategoryViewController: UITableViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(imageTapped))
         iconCategoryImageView?.userInteractionEnabled = true
         iconCategoryImageView?.addGestureRecognizer(tapGestureRecognizer)
-        self.navigationController?.navigationBar.tintColor = UIColor.greenColor()
     }
     
     func imageTapped() {

@@ -19,7 +19,6 @@ class AccountTableViewController: UITableViewController {
         if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID") {
             emailLabel?.text = userID
         }
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .Done, target: self, action: nil)
     }
     
