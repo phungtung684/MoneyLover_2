@@ -34,36 +34,7 @@ class ShowCategoryViewController: UIViewController {
         chooseTypeSegmentedControl?.selectedSegmentIndex = 1
         rightbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Edit, target: self, action: #selector(editAction))
         navigationItem.rightBarButtonItem = rightbutton
-        let listCategory = dataStored.fetchRecordsForEntity("Category", inManagedObjectContext: managedObjectContext)
-        if listCategory.count == 0 {
-            for category in listCategoryAvailable.listCategory {
-                if let category = categoryManager.addCategoryAvailale(category) {
-                    if let typeCategory = category.type, let nameCategory = category.name, let iconCategory = category.icon, let idCategory = category.idCategory {
-                        if typeCategory == 1 {
-                            dictCategory[1]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.expense, iconCategory: iconCategory, idCategory: idCategory.integerValue))
-                        } else if typeCategory == 0 {
-                            dictCategory[0]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.deptLoan, iconCategory: iconCategory, idCategory: idCategory.integerValue))
-                        } else {
-                            dictCategory[2]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.income, iconCategory: iconCategory, idCategory: idCategory.integerValue))
-                        }
-                    }
-                }
-            }
-        } else {
-            if let listCategory = listCategory as? [Category] {
-                for category in listCategory {
-                    if let typeCategory = category.type, let nameCategory = category.name, let iconCategory = category.icon, let idCategory = category.idCategory {
-                        if typeCategory == 1 {
-                            dictCategory[1]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.expense, iconCategory: iconCategory, idCategory: idCategory.integerValue))
-                        } else if typeCategory == 0 {
-                            dictCategory[0]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.deptLoan, iconCategory: iconCategory, idCategory: idCategory.integerValue))
-                        } else {
-                            dictCategory[2]?.append(CategoryModel(nameCategory: nameCategory, typeCategory: CategoryModel.CategoryType.income, iconCategory: iconCategory, idCategory: idCategory.integerValue))
-                        }
-                    }
-                }
-            }
-        }
+        dictCategory = self.categoryManager.getAllCategory()
     }
     
     @IBAction func chooseTypeCategory(sender: AnyObject) {
@@ -72,8 +43,6 @@ class ShowCategoryViewController: UIViewController {
     
     @objc private func editAction() {
         if let listEditCategoryViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ListEditCategoryViewController") as? ListEditCategoryViewController {
-            let section = SectionsData()
-            listEditCategoryViewController.sectionData.appendContentsOf(section.getSectionsFromData(dictCategory))
             self.navigationController?.pushViewController(listEditCategoryViewController, animated: true)
         }
     }

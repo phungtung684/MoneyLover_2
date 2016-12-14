@@ -9,11 +9,14 @@
 import UIKit
 
 class CategoryModel: NSObject {
-    
     enum CategoryType: Int {
         case income = 2
         case expense = 1
         case deptLoan = 0
+        
+        func setValue(value: Int) -> CategoryType? {
+            return CategoryType.init(rawValue: value)
+        }
     }
     var nameCategory = ""
     var typeCategory: CategoryType
@@ -27,6 +30,9 @@ class CategoryModel: NSObject {
         self.typeCategory = typeCategory
     }
     
+    convenience init(category: Category) {
+        self.init(nameCategory: category.name ?? "", typeCategory: CategoryType.init(rawValue: Int(category.type ?? 0)) ?? CategoryType.income, iconCategory: category.icon ?? "", idCategory: Int(category.idCategory ?? 0))
+    }
     
     func getTypeString() -> String {
         switch typeCategory {

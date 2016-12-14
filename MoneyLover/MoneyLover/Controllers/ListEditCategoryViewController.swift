@@ -13,12 +13,20 @@ class ListEditCategoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var sectionData = [Section]()
     let cellIdentifier = "Cell"
+    var categoryManager = CategoryManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("CategoryTitle", comment: "")
         tableView?.delegate = self
         tableView?.dataSource = self
+        let section = SectionsData()
+        self.sectionData.appendContentsOf(section.getSectionsFromData(self.categoryManager.getAllCategory()))
+        self.addBarItem()
+    }
+    
+    private func addBarItem() {
         let image = UIImage(named: "icon_94")
         let button = UIButton()
         button.setImage(image, forState: .Normal)

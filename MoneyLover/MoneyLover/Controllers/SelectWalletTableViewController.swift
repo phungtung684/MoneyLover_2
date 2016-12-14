@@ -108,6 +108,7 @@ class SelectWalletTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 2 {
             if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
+                addWalletVC.delegate = self
                 self.navigationController?.pushViewController(addWalletVC, animated: true)
             }
             
@@ -115,6 +116,14 @@ class SelectWalletTableViewController: UITableViewController {
             self.changeCurrentWalletDelegate?.changeCurrentWallet(dataWallet[indexPath.row])
             self.dismissViewControllerAnimated(true, completion: nil)
         }
+    }
+}
+
+extension SelectWalletTableViewController: ReloadDataFromAddWalletTVCDelegate {
+    func reloadData() {
+        self.dataWallet.removeAll()
+        self.dataWallet.appendContentsOf(walletManager.getAllWallet())
+        self.tableView.reloadData()
     }
 }
 
