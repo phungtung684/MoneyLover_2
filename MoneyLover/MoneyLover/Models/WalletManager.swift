@@ -92,4 +92,20 @@ class WalletManager {
         }
         return false
     }
+    
+    func showWalletDefault() -> WalletModel? {
+        let listWallet = dataStored.fetchAttributePredicate("Wallet", attribute: "name", stringPredicate: "ATM", inManagedObjectContext: managedObjectContext)
+        if listWallet.count == 1 {
+            if let wallet = listWallet.first as? Wallet, let name = wallet.name, let id = wallet.idWallet, let icon = wallet.icon, let amount = wallet.amount {
+                let walletModel = WalletModel(name: name, idWallet: id, iconName: icon, amount: amount.doubleValue)
+                do {
+                    try managedObjectContext.save()
+                    return walletModel
+                } catch {
+                    return nil
+                }
+            }
+        }
+        return nil
+    }
 }

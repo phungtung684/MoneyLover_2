@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ChooseCategoryDelegate: class {
+    func didChooseCategory(categoryModel: CategoryModel?)
+}
+
 class ShowCategoryViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,6 +24,7 @@ class ShowCategoryViewController: UIViewController {
     var categoryManager = CategoryManager()
     var listCategoryAvailable = ListCategoryAvailable()
     var dictCategory = [0: [CategoryModel](), 1: [CategoryModel](), 2: [CategoryModel]()]
+    weak var delegate: ChooseCategoryDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +118,8 @@ extension ShowCategoryViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.delegate?.didChooseCategory(dataCategory[indexPath.row])
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }
 
