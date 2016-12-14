@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol ChooseWalletDelegate: class {
+    func didChooseWallet(walletModel: WalletModel?)
+}
+
 class ChooseWalletTableViewController: UITableViewController {
     
     var dataWallet = [WalletModel]()
     var dataStored = DataStored()
     var walletManager = WalletManager()
     lazy var managedObjectContext = CoreDataManager().managedObjectContext
+    weak var delegate: ChooseWalletDelegate?
+    var checkIsFromViewAddTransaction = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,11 +81,16 @@ class ChooseWalletTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.selected = false
-        if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
-            addWalletVC.delegate  = self
-            addWalletVC.wallet = dataWallet[indexPath.row]
-            addWalletVC.indexPath = indexPath
-            self.navigationController?.pushViewController(addWalletVC, animated: true)
+        if checkIsFromViewAddTransaction {
+            self.delegate?.didChooseWallet(dataWallet[indexPath.row])
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
+                addWalletVC.delegate  = self
+                addWalletVC.wallet = dataWallet[indexPath.row]
+                addWalletVC.indexPath = indexPath
+                self.navigationController?.pushViewController(addWalletVC, animated: true)
+            }
         }
     }
 }
