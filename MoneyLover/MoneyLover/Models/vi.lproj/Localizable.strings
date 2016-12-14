@@ -33,3 +33,4 @@ ChooseCategoryTitle = "Chọn Nhóm";
 CategoryTitle = "Nhóm";
 Total = "Tổng Cộng";
 TitleActionCell = "Thêm ví";
+TitleEditWallet = "Sửa thông tin ví";

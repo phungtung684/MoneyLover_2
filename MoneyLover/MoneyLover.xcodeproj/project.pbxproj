@@ -51,8 +51,6 @@
 		145935761DE68A82004BC748 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459356E1DE68A82004BC748 /* Category+CoreDataProperties.swift */; };
 		145935771DE68A82004BC748 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459356F1DE68A82004BC748 /* Transaction+CoreDataClass.swift */; };
 		145935781DE68A82004BC748 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145935701DE68A82004BC748 /* Transaction+CoreDataProperties.swift */; };
-		145935791DE68A82004BC748 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145935711DE68A82004BC748 /* User+CoreDataClass.swift */; };
-		1459357A1DE68A82004BC748 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145935721DE68A82004BC748 /* User+CoreDataProperties.swift */; };
 		1459357B1DE68A82004BC748 /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145935731DE68A82004BC748 /* Wallet+CoreDataClass.swift */; };
 		1459357C1DE68A82004BC748 /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145935741DE68A82004BC748 /* Wallet+CoreDataProperties.swift */; };
 		145FAB291DF10F2700D71E9B /* DataViewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145FAB281DF10F2700D71E9B /* DataViewAccount.swift */; };
@@ -72,6 +70,9 @@
 		149C11931DE744BA0067AAE7 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C11921DE744BA0067AAE7 /* ReportViewController.swift */; };
 		14CBC78E1E00DD3D0079B85C /* SelecWalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBC78C1E00DD3D0079B85C /* SelecWalletTableViewCell.swift */; };
 		14CBC78F1E00DD3D0079B85C /* SelecWalletTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CBC78D1E00DD3D0079B85C /* SelecWalletTableViewCell.xib */; };
+		14CBC7921E00FD080079B85C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBC7911E00FD080079B85C /* Defaults.swift */; };
+		14CBC7991E0136700079B85C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBC7971E0136700079B85C /* User+CoreDataClass.swift */; };
+		14CBC79A1E0136700079B85C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBC7981E0136700079B85C /* User+CoreDataProperties.swift */; };
 		14DA31301DE41EF7003D8390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA31201DE41EF7003D8390 /* AppDelegate.swift */; };
 		14DA31311DE41EF7003D8390 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA31221DE41EF7003D8390 /* LoginViewController.swift */; };
 		14DA31321DE41EF7003D8390 /* MoneyLover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14DA31251DE41EF7003D8390 /* MoneyLover.xcdatamodeld */; };
@@ -131,8 +132,6 @@
 		1459356E1DE68A82004BC748 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1459356F1DE68A82004BC748 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		145935701DE68A82004BC748 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		145935711DE68A82004BC748 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		145935721DE68A82004BC748 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		145935731DE68A82004BC748 /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		145935741DE68A82004BC748 /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		145FAB281DF10F2700D71E9B /* DataViewAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewAccount.swift; sourceTree = "<group>"; };
@@ -155,6 +154,9 @@
 		149C11921DE744BA0067AAE7 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		14CBC78C1E00DD3D0079B85C /* SelecWalletTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecWalletTableViewCell.swift; sourceTree = "<group>"; };
 		14CBC78D1E00DD3D0079B85C /* SelecWalletTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelecWalletTableViewCell.xib; sourceTree = "<group>"; };
+		14CBC7911E00FD080079B85C /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		14CBC7971E0136700079B85C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		14CBC7981E0136700079B85C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		14DA31061DE41B9D003D8390 /* MoneyLover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DA31181DE41B9D003D8390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14DA31201DE41EF7003D8390 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			name = Account;
 			sourceTree = "<group>";
 		};
+		14CBC7901E00FD080079B85C /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				14CBC7911E00FD080079B85C /* Defaults.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
 		14DA30FD1DE41B9D003D8390 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				144FEF581DE6C76C0078BAB4 /* MoneyLover.entitlements */,
+				14CBC7901E00FD080079B85C /* Default */,
 				14DA311F1DE41EF7003D8390 /* AppDelegate */,
 				14DA31211DE41EF7003D8390 /* Controllers */,
 				14DA31231DE41EF7003D8390 /* Models */,
@@ -313,12 +324,12 @@
 		14DA31241DE41EF7003D8390 /* Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				14CBC7971E0136700079B85C /* User+CoreDataClass.swift */,
+				14CBC7981E0136700079B85C /* User+CoreDataProperties.swift */,
 				1459356D1DE68A82004BC748 /* Category+CoreDataClass.swift */,
 				1459356E1DE68A82004BC748 /* Category+CoreDataProperties.swift */,
 				1459356F1DE68A82004BC748 /* Transaction+CoreDataClass.swift */,
 				145935701DE68A82004BC748 /* Transaction+CoreDataProperties.swift */,
-				145935711DE68A82004BC748 /* User+CoreDataClass.swift */,
-				145935721DE68A82004BC748 /* User+CoreDataProperties.swift */,
 				145935731DE68A82004BC748 /* Wallet+CoreDataClass.swift */,
 				145935741DE68A82004BC748 /* Wallet+CoreDataProperties.swift */,
 				14DA31251DE41EF7003D8390 /* MoneyLover.xcdatamodeld */,
@@ -570,7 +581,6 @@
 				0842C0BB1DF665B200CD805A /* ConfigCell.swift in Sources */,
 				084471F01DF503C100F80D46 /* DetailCategoryViewController.swift in Sources */,
 				1461FC081DF52058006F02E0 /* WalletManager.swift in Sources */,
-				1459357A1DE68A82004BC748 /* User+CoreDataProperties.swift in Sources */,
 				089491591DEBD3BA00619E11 /* AddTransactionViewController.swift in Sources */,
 				A83E6E1F1DEC7D260075D90E /* CustomUICorlor.swift in Sources */,
 				1459357C1DE68A82004BC748 /* Wallet+CoreDataProperties.swift in Sources */,
@@ -593,17 +603,19 @@
 				0890DD001E00F8FE0049D0DE /* TransactionManager.swift in Sources */,
 				145935771DE68A82004BC748 /* Transaction+CoreDataClass.swift in Sources */,
 				08599B7A1DF12733003629F8 /* CategoryManager.swift in Sources */,
+				14CBC79A1E0136700079B85C /* User+CoreDataProperties.swift in Sources */,
 				14DA31301DE41EF7003D8390 /* AppDelegate.swift in Sources */,
 				089491611DEC122600619E11 /* ViewAddTransaction.swift in Sources */,
 				08317B8A1DF93501005617F6 /* ChooseLocationViewcontroller.swift in Sources */,
 				1488D8961DFFE38A0092D917 /* TabbarViewController.swift in Sources */,
 				1459356A1DE674B6004BC748 /* RegisterViewController.swift in Sources */,
-				145935791DE68A82004BC748 /* User+CoreDataClass.swift in Sources */,
 				1461FC061DF51E13006F02E0 /* ChooseWalletTableViewController.swift in Sources */,
 				14DA31321DE41EF7003D8390 /* MoneyLover.xcdatamodeld in Sources */,
 				142B306E1DF5F06100BBBEA6 /* WalletTableViewCell.swift in Sources */,
+				14CBC7991E0136700079B85C /* User+CoreDataClass.swift in Sources */,
 				145935761DE68A82004BC748 /* Category+CoreDataProperties.swift in Sources */,
 				1418E79F1DF56A3500B0300C /* AddWalletTableViewController.swift in Sources */,
+				14CBC7921E00FD080079B85C /* Defaults.swift in Sources */,
 				08601B1D1DEED0D8004EF0F3 /* ChooseIconColectionViewCell.swift in Sources */,
 				0890DD011E00F8FE0049D0DE /* TransactionModel.swift in Sources */,
 				084471EC1DF5035F00F80D46 /* SectionsData.swift in Sources */,

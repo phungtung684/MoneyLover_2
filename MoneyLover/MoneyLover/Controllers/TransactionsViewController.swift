@@ -30,8 +30,14 @@ class TransactionsViewController: UIViewController {
         self.tabBarController?.delegate = self
         self.configScrollView()
         self.addTableToView()
+        let tabbaritem = self.tabBarController?.tabBar.items![2]
+        print(tabbaritem?.tag)
     }
     
+    @objc func test() {
+        print(111234567890)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
