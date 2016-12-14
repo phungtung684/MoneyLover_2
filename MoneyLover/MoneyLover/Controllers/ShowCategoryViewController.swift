@@ -25,7 +25,7 @@ class ShowCategoryViewController: UIViewController {
         super.viewDidLoad()
         tableView?.dataSource = self
         tableView?.delegate = self
-        self.title = "Select Category"
+        self.title = NSLocalizedString("ChooseCategoryTitle", comment: "")
         chooseTypeSegmentedControl?.selectedSegmentIndex = 1
         rightbutton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Edit, target: self, action: #selector(editAction))
         navigationItem.rightBarButtonItem = rightbutton

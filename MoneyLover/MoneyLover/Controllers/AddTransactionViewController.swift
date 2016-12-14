@@ -18,12 +18,11 @@ class AddTransactionViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Add Transaction"
+        self.title = NSLocalizedString("AddTransantionTitle", comment: "")
         let buttonSave = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: #selector(saveAction))
         let buttonCancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(cancelAction))
         navigationItem.rightBarButtonItem = buttonSave
         navigationItem.leftBarButtonItem = buttonCancel
-        self.navigationController?.navigationBar.tintColor = UIColor.greenColor()
         self.dateLabel?.text = dateCurrent.getFormatDate()
     }
     
@@ -37,7 +36,7 @@ class AddTransactionViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowCategoryViewController" {
             let backItem = UIBarButtonItem()
-            backItem.title = "Back"
+            backItem.title = ""
             navigationItem.backBarButtonItem = backItem
         } else if segue.identifier == "NoteViewController" {
             if let noteViewController = segue.destinationViewController as? NoteViewController {

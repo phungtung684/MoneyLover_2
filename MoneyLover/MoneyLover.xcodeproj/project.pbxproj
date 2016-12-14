@@ -65,7 +65,11 @@
 		146D727B1DED194000ED05F7 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146D72791DED194000ED05F7 /* TransactionTableViewCell.xib */; };
 		146D727D1DED197000ED05F7 /* HeaderTransactionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D727C1DED197000ED05F7 /* HeaderTransactionSection.swift */; };
 		146D727F1DED19B300ED05F7 /* HeaderTransactionSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146D727E1DED19B300ED05F7 /* HeaderTransactionSection.xib */; };
+		1488D8961DFFE38A0092D917 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488D8951DFFE38A0092D917 /* TabbarViewController.swift */; };
+		1488D8981DFFEEC40092D917 /* SelectWalletTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488D8971DFFEEC40092D917 /* SelectWalletTableViewController.swift */; };
 		149C11931DE744BA0067AAE7 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C11921DE744BA0067AAE7 /* ReportViewController.swift */; };
+		14CBC78E1E00DD3D0079B85C /* SelecWalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBC78C1E00DD3D0079B85C /* SelecWalletTableViewCell.swift */; };
+		14CBC78F1E00DD3D0079B85C /* SelecWalletTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CBC78D1E00DD3D0079B85C /* SelecWalletTableViewCell.xib */; };
 		14DA31301DE41EF7003D8390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA31201DE41EF7003D8390 /* AppDelegate.swift */; };
 		14DA31311DE41EF7003D8390 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA31221DE41EF7003D8390 /* LoginViewController.swift */; };
 		14DA31321DE41EF7003D8390 /* MoneyLover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14DA31251DE41EF7003D8390 /* MoneyLover.xcdatamodeld */; };
@@ -142,7 +146,11 @@
 		146D72791DED194000ED05F7 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		146D727C1DED197000ED05F7 /* HeaderTransactionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTransactionSection.swift; sourceTree = "<group>"; };
 		146D727E1DED19B300ED05F7 /* HeaderTransactionSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTransactionSection.xib; sourceTree = "<group>"; };
+		1488D8951DFFE38A0092D917 /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		1488D8971DFFEEC40092D917 /* SelectWalletTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWalletTableViewController.swift; sourceTree = "<group>"; };
 		149C11921DE744BA0067AAE7 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		14CBC78C1E00DD3D0079B85C /* SelecWalletTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecWalletTableViewCell.swift; sourceTree = "<group>"; };
+		14CBC78D1E00DD3D0079B85C /* SelecWalletTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelecWalletTableViewCell.xib; sourceTree = "<group>"; };
 		14DA31061DE41B9D003D8390 /* MoneyLover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DA31181DE41B9D003D8390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14DA31201DE41EF7003D8390 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +184,43 @@
 				084471F31DF506E900F80D46 /* TypeCategoryCell.swift */,
 			);
 			path = CellViewDetailCategory;
+			sourceTree = "<group>";
+		};
+		1488D8921DFFAAB20092D917 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				143BD1011DE7399D00764D2F /* TransactionsViewController.swift */,
+				1458386D1DE83BFA00FB269A /* AddNewTransactionViewController.swift */,
+				089491581DEBD3BA00619E11 /* AddTransactionViewController.swift */,
+				08317B871DF9163B005617F6 /* DateViewController.swift */,
+				08317B831DF90EC1005617F6 /* NoteViewController.swift */,
+				08317B891DF93501005617F6 /* ChooseLocationViewcontroller.swift */,
+				08317B8B1DF944AF005617F6 /* LocationSearchTable.swift */,
+				1488D8931DFFAACD0092D917 /* Category */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
+		1488D8931DFFAACD0092D917 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				08F6529F1DED73B6008A116D /* ShowCategoryViewController.swift */,
+				08599B7D1DF17E55003629F8 /* ListEditCategoryViewController.swift */,
+				084471EF1DF503C100F80D46 /* DetailCategoryViewController.swift */,
+				08F652A11DED9167008A116D /* AddCategoryViewController.swift */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		1488D8941DFFAAEC0092D917 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				1418E7A61DF56D6A00B0300C /* AccountTableViewController.swift */,
+				1461FC051DF51E13006F02E0 /* ChooseWalletTableViewController.swift */,
+				145FAB301DF1504000D71E9B /* ChangePasswordTableViewController.swift */,
+				1418E79E1DF56A3500B0300C /* AddWalletTableViewController.swift */,
+			);
+			name = Account;
 			sourceTree = "<group>";
 		};
 		14DA30FD1DE41B9D003D8390 = {
@@ -225,25 +270,14 @@
 		14DA31211DE41EF7003D8390 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1458386D1DE83BFA00FB269A /* AddNewTransactionViewController.swift */,
-				143BD1011DE7399D00764D2F /* TransactionsViewController.swift */,
 				14DA31221DE41EF7003D8390 /* LoginViewController.swift */,
 				145935691DE674B6004BC748 /* RegisterViewController.swift */,
-				089491581DEBD3BA00619E11 /* AddTransactionViewController.swift */,
-				08F6529F1DED73B6008A116D /* ShowCategoryViewController.swift */,
-				08F652A11DED9167008A116D /* AddCategoryViewController.swift */,
+				1488D8951DFFE38A0092D917 /* TabbarViewController.swift */,
+				1488D8971DFFEEC40092D917 /* SelectWalletTableViewController.swift */,
 				149C11921DE744BA0067AAE7 /* ReportViewController.swift */,
 				08601B1A1DEEC692004EF0F3 /* ShowIconViewController.swift */,
-				145FAB301DF1504000D71E9B /* ChangePasswordTableViewController.swift */,
-				08599B7D1DF17E55003629F8 /* ListEditCategoryViewController.swift */,
-				1461FC051DF51E13006F02E0 /* ChooseWalletTableViewController.swift */,
-				1418E7A61DF56D6A00B0300C /* AccountTableViewController.swift */,
-				1418E79E1DF56A3500B0300C /* AddWalletTableViewController.swift */,
-				084471EF1DF503C100F80D46 /* DetailCategoryViewController.swift */,
-				08317B831DF90EC1005617F6 /* NoteViewController.swift */,
-				08317B871DF9163B005617F6 /* DateViewController.swift */,
-				08317B891DF93501005617F6 /* ChooseLocationViewcontroller.swift */,
-				08317B8B1DF944AF005617F6 /* LocationSearchTable.swift */,
+				1488D8921DFFAAB20092D917 /* Transaction */,
+				1488D8941DFFAAEC0092D917 /* Account */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -331,6 +365,8 @@
 				08601B1C1DEED0D8004EF0F3 /* ChooseIconColectionViewCell.swift */,
 				142B306D1DF5F06000BBBEA6 /* WalletTableViewCell.swift */,
 				0873F6C91DFA59AC00BA5D52 /* LocationSearchTableCell.swift */,
+				14CBC78C1E00DD3D0079B85C /* SelecWalletTableViewCell.swift */,
+				14CBC78D1E00DD3D0079B85C /* SelecWalletTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -426,6 +462,7 @@
 				146D727F1DED19B300ED05F7 /* HeaderTransactionSection.xib in Resources */,
 				1418E7A01DF56B8900B0300C /* Main.storyboard in Resources */,
 				144FEF571DE6C13D0078BAB4 /* GoogleService-Info.plist in Resources */,
+				14CBC78F1E00DD3D0079B85C /* SelecWalletTableViewCell.xib in Resources */,
 				1461FBFF1DF4FC70006F02E0 /* Localizable.strings in Resources */,
 				0842C0C41DF69A2C00CD805A /* AddTransaction.storyboard in Resources */,
 				14DA31371DE4204D003D8390 /* LaunchScreen.storyboard in Resources */,
@@ -521,6 +558,7 @@
 				0890DCEB1DE6C2BF007FD3B5 /* CheckValidateTextField.swift in Sources */,
 				08317B8C1DF944AF005617F6 /* LocationSearchTable.swift in Sources */,
 				08317B881DF9163B005617F6 /* DateViewController.swift in Sources */,
+				1488D8981DFFEEC40092D917 /* SelectWalletTableViewController.swift in Sources */,
 				08F652A01DED73B6008A116D /* ShowCategoryViewController.swift in Sources */,
 				0890DCE71DE6C1AB007FD3B5 /* CoreDataManager.swift in Sources */,
 				0842C0BB1DF665B200CD805A /* ConfigCell.swift in Sources */,
@@ -533,6 +571,7 @@
 				084471F41DF506E900F80D46 /* NameCategoryCell.swift in Sources */,
 				0890DCE91DE6C1ED007FD3B5 /* DataStored.swift in Sources */,
 				084471EE1DF5036E00F80D46 /* DataDetailCategory.swift in Sources */,
+				14CBC78E1E00DD3D0079B85C /* SelecWalletTableViewCell.swift in Sources */,
 				14DA31311DE41EF7003D8390 /* LoginViewController.swift in Sources */,
 				0873F6CA1DFA59AC00BA5D52 /* LocationSearchTableCell.swift in Sources */,
 				084471EA1DF4F91B00F80D46 /* CategoryModel.swift in Sources */,
@@ -550,6 +589,7 @@
 				14DA31301DE41EF7003D8390 /* AppDelegate.swift in Sources */,
 				089491611DEC122600619E11 /* ViewAddTransaction.swift in Sources */,
 				08317B8A1DF93501005617F6 /* ChooseLocationViewcontroller.swift in Sources */,
+				1488D8961DFFE38A0092D917 /* TabbarViewController.swift in Sources */,
 				1459356A1DE674B6004BC748 /* RegisterViewController.swift in Sources */,
 				145935791DE68A82004BC748 /* User+CoreDataClass.swift in Sources */,
 				1461FC061DF51E13006F02E0 /* ChooseWalletTableViewController.swift in Sources */,
@@ -712,7 +752,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyLover/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Framgia.MoneyLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -732,7 +772,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyLover/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Framgia.MoneyLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";

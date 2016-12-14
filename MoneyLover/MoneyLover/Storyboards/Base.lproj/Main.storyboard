@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xpD-UJ-6xw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rz3-PX-0JW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,35 +21,35 @@
                         <viewControllerLayoutGuide type="bottom" id="woW-8a-ea1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dsn-Sx-E7Q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D46-oI-j1X">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNR-5E-KNt">
-                                        <rect key="frame" x="41.5" y="14" width="77" height="28"/>
+                                        <rect key="frame" x="41.5" y="11.5" width="77" height="28"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <state key="normal" title="Tháng trước">
-                                            <color key="titleColor" red="0.60271793603897095" green="0.602699875831604" blue="0.60271012783050537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.53257948160171509" green="0.53254371881484985" blue="0.53256458044052124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-ub-ZB9">
-                                        <rect key="frame" x="251.5" y="14" width="58" height="28"/>
+                                        <rect key="frame" x="251.5" y="11.5" width="58" height="28"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <state key="normal" title="Tương lai">
-                                            <color key="titleColor" red="0.60271793603897095" green="0.602699875831604" blue="0.60271012783050537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.53257948160171509" green="0.53254371881484985" blue="0.53256458044052124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBV-rZ-wJF">
-                                        <rect key="frame" x="148.5" y="15" width="65" height="28"/>
+                                        <rect key="frame" x="148.5" y="12.5" width="65" height="28"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <state key="normal" title="Tháng này">
-                                            <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.087175138294696808" green="0.47076952457427979" blue="0.21250048279762268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.089557722210884094" green="0.40523296594619751" blue="0.16092810034751892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="8gi-ub-ZB9" firstAttribute="centerY" secondItem="D46-oI-j1X" secondAttribute="centerY" id="4di-cc-vLB"/>
                                     <constraint firstItem="XBV-rZ-wJF" firstAttribute="leading" secondItem="KNR-5E-KNt" secondAttribute="trailing" constant="30" id="Qmp-S3-ZiP"/>
@@ -60,7 +60,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.91355359554290771" green="0.90514987707138062" blue="0.94410622119903564" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.89190828800201416" green="0.88004875183105469" blue="0.92984753847122192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="D46-oI-j1X" firstAttribute="width" secondItem="Dsn-Sx-E7Q" secondAttribute="width" id="34o-Ak-Jc2"/>
                             <constraint firstItem="D46-oI-j1X" firstAttribute="top" secondItem="w3Z-qB-Pzp" secondAttribute="bottom" id="3bv-zY-AX4"/>
@@ -68,52 +68,85 @@
                             <constraint firstItem="D46-oI-j1X" firstAttribute="height" secondItem="Dsn-Sx-E7Q" secondAttribute="height" multiplier="1:11" id="Qlf-IE-KLU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Giao dịch" image="ic_wallet" id="h1i-2P-Oit"/>
                     <navigationItem key="navigationItem" title="Transactions" id="0ev-Zv-fN9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylp-6n-7Ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184" y="403"/>
+            <point key="canvasLocation" x="431" y="-370"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar View Controller-->
         <scene sceneID="pyr-db-oJa">
             <objects>
-                <tabBarController storyboardIdentifier="TabbarController" automaticallyAdjustsScrollViewInsets="NO" id="xpD-UJ-6xw" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabbarController" automaticallyAdjustsScrollViewInsets="NO" id="xpD-UJ-6xw" customClass="TabbarViewController" customModule="MoneyLover" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0f3-wL-vaZ"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="ae7-md-GUn">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="selectedImageTintColor" red="0.1332656592130661" green="0.60790467262268066" blue="0.17751142382621765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.12731076776981354" green="0.55310314893722534" blue="0.1343768984079361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Gxi-Zb-fVh" kind="relationship" relationship="viewControllers" id="Eis-Za-MMe"/>
-                        <segue destination="VHO-A3-Jtt" kind="relationship" relationship="viewControllers" id="HE9-Ht-8f7"/>
-                        <segue destination="vZy-KB-aCo" kind="relationship" relationship="viewControllers" id="BMG-BT-ewX"/>
-                        <segue destination="fOw-Ri-XDf" kind="relationship" relationship="viewControllers" id="aIe-cZ-qma"/>
-                        <segue destination="k70-7r-o2h" kind="relationship" relationship="viewControllers" id="kHx-Kt-7QR"/>
+                        <segue destination="kR2-ux-1dv" kind="relationship" relationship="viewControllers" id="RDt-4N-xeD"/>
+                        <segue destination="897-SP-aRh" kind="relationship" relationship="viewControllers" id="F5W-uz-eIq"/>
+                        <segue destination="ZMl-Ra-dOf" kind="relationship" relationship="viewControllers" id="ma3-Ky-Hyt"/>
+                        <segue destination="AxV-MV-IsU" kind="relationship" relationship="viewControllers" id="FIT-D2-ah8"/>
+                        <segue destination="Cgq-Fs-riD" kind="relationship" relationship="viewControllers" id="Aua-10-1BE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5W-cG-sFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="1571"/>
+            <point key="canvasLocation" x="-1159" y="898"/>
         </scene>
-        <!--Sổ giao dịch-->
-        <scene sceneID="3Sk-3u-nyv">
+        <!--Select Wallet Table View Controller-->
+        <scene sceneID="KCa-vf-wNE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gxi-Zb-fVh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sổ giao dịch" image="ic_wallet" selectedImage="ic_wallet" id="u4Q-zf-K3L"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s7D-xb-MrN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <tableViewController storyboardIdentifier="SelectWalletTableController" id="w9s-4R-82y" customClass="SelectWalletTableViewController" customModule="MoneyLover" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="RTv-Qu-DNW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="Sf1-uR-Fci">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sf1-uR-Fci" id="1nT-YP-kDF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="w9s-4R-82y" id="aMu-k0-L4E"/>
+                            <outlet property="delegate" destination="w9s-4R-82y" id="ChP-Dh-0iK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ZN-Px-d2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="3440"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7zC-eC-Ogf">
+            <objects>
+                <navigationController storyboardIdentifier="NavgationViewController" id="rz3-PX-0JW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" translucent="NO" id="xhM-al-OBt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.015686274509803921" green="0.29666596456290839" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.15027855336666107" green="0.69099998474121094" blue="0.26460731029510498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kR2-ux-1dv" kind="relationship" relationship="rootViewController" id="gBK-ZS-URg"/>
+                        <segue destination="xpD-UJ-6xw" kind="relationship" relationship="rootViewController" id="PB4-dh-m4t"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GPJ-h7-jg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCy-EH-RNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="403"/>
+            <point key="canvasLocation" x="-2241" y="897"/>
         </scene>
         <!--Chart-->
         <scene sceneID="FN7-tv-dwb">
@@ -124,34 +157,16 @@
                         <viewControllerLayoutGuide type="bottom" id="EX1-cg-cwG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bma-vQ-u7L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99983716011047363" blue="0.99994874000549316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Báo cáo" image="ic_chart_pie" id="zoP-wU-ddB"/>
                     <navigationItem key="navigationItem" title="Chart" id="AW9-jo-I7x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQy-xk-Uql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184" y="1156"/>
-        </scene>
-        <!--Báo cáo-->
-        <scene sceneID="bsR-iG-pyp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VHO-A3-Jtt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Báo cáo" image="ic_chart_pie" id="6OS-e5-q8m"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQM-Ak-SRi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="897-SP-aRh" kind="relationship" relationship="rootViewController" id="uFE-8Q-dZc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O8R-jz-aey" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1332" y="1192"/>
+            <point key="canvasLocation" x="430" y="380"/>
         </scene>
         <!--Add new Transaction-->
         <scene sceneID="1yp-Zj-MSC">
@@ -162,22 +177,24 @@
                         <viewControllerLayoutGuide type="bottom" id="ZRO-e5-2Fm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dUu-UF-ZwO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkY-04-rUO">
-                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="266.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YkY-04-rUO" firstAttribute="centerX" secondItem="dUu-UF-ZwO" secondAttribute="centerX" id="VUi-Qb-ka6"/>
                             <constraint firstItem="YkY-04-rUO" firstAttribute="centerY" secondItem="dUu-UF-ZwO" secondAttribute="centerY" id="bBb-LC-Y9g"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="czx-NN-Jvb"/>
+                    <tabBarItem key="tabBarItem" title="Them giao dịch" image="ic_add_circle_green" id="czx-NN-Jvb">
+                        <inset key="imageInsets" minX="0.0" minY="-16" maxX="0.0" maxY="16"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Add new Transaction" id="eBc-vO-iLp">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FAX-mj-0DY">
                             <connections>
@@ -188,9 +205,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qh-db-U0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184" y="1934"/>
+            <point key="canvasLocation" x="430" y="1061"/>
         </scene>
-        <!--View Controller-->
+        <!--Lập kế hoạch-->
         <scene sceneID="H8J-da-Rrf">
             <objects>
                 <viewController id="AxV-MV-IsU" sceneMemberID="viewController">
@@ -199,85 +216,26 @@
                         <viewControllerLayoutGuide type="bottom" id="zce-dF-Yrl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6SS-ZB-BsV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99989593029022217" blue="0.99996638298034668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Lập kế hoạch" image="ic_bk_budget" id="Yvs-sm-MDZ"/>
                     <navigationItem key="navigationItem" id="uBb-fH-PLm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLq-BT-Gis" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184" y="2785"/>
-        </scene>
-        <!--Lập kế hoạch-->
-        <scene sceneID="S9p-tO-8Jl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fOw-Ri-XDf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lập kế hoạch" image="ic_bk_budget" id="DEJ-Ng-7mh"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjU-2U-xw8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="AxV-MV-IsU" kind="relationship" relationship="rootViewController" id="5in-JV-2u8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xMM-Yf-N53" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1332" y="2785"/>
-        </scene>
-        <!--Thêm giao dịch-->
-        <scene sceneID="liw-5e-UoF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vZy-KB-aCo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Thêm giao dịch" image="ic_add_circle_green" id="67g-KV-TOa">
-                        <inset key="imageInsets" minX="0.0" minY="-16" maxX="0.0" maxY="16"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GaH-Sg-HCa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f9J-C8-CaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1332" y="1934"/>
+            <point key="canvasLocation" x="430" y="1800"/>
         </scene>
         <!--Tài khoản-->
-        <scene sceneID="eOd-XS-0cl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k70-7r-o2h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tài khoản" image="ic_bk_option_menu" id="1Rb-CP-cCb"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L1N-7c-gxP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.13559842109680176" green="0.65685486793518066" blue="0.23219004273414612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Cgq-Fs-riD" kind="relationship" relationship="rootViewController" id="BoP-jj-gdv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pry-zB-Kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1332" y="3705"/>
-        </scene>
-        <!--Account Table View Controller-->
         <scene sceneID="38C-nQ-M59">
             <objects>
                 <tableViewController id="Cgq-Fs-riD" customClass="AccountTableViewController" customModule="MoneyLover" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="126" sectionHeaderHeight="18" sectionFooterHeight="18" id="aoO-RI-OrJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <color key="sectionIndexBackgroundColor" red="0.88896989822387695" green="0.88890933990478516" blue="0.88894462585449219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.86220085620880127" green="0.86210036277770996" blue="0.86216092109680176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="XRI-H7-FKp">
                                 <cells>
@@ -391,7 +349,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-wx-oU5">
                                                     <rect key="frame" x="152" y="9" width="70" height="30"/>
                                                     <state key="normal" title="Đăng xuất">
-                                                        <color key="titleColor" red="0.96847540140151978" green="0.0" blue="0.044634118676185608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.94685924053192139" green="0.0" blue="0.052827708423137665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="logoutAction:" destination="Cgq-Fs-riD" eventType="touchUpInside" id="rjs-lq-EVa"/>
@@ -412,9 +370,10 @@
                             <outlet property="delegate" destination="Cgq-Fs-riD" id="YUB-ps-eqx"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Tài khoản" image="ic_bk_option_menu" id="hUy-hK-Idv"/>
                     <navigationItem key="navigationItem" id="4CT-Dt-W5P">
                         <barButtonItem key="backBarButtonItem" title="Quay lại" id="VPd-N0-HPM">
-                            <color key="tintColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -423,22 +382,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qiu-jV-dAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2006" y="3705"/>
+            <point key="canvasLocation" x="430" y="2684"/>
         </scene>
         <!--Choose Wallet Table View Controller-->
         <scene sceneID="DSE-al-vUY">
             <objects>
                 <tableViewController storyboardIdentifier="ChooseWalletTVC" id="LAi-I3-dLh" customClass="ChooseWalletTableViewController" customModule="MoneyLover" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="sDr-vJ-cB4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="vYN-jC-b9j" customClass="WalletTableViewCell" customModule="MoneyLover" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="55" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYN-jC-b9j" id="LjJ-l3-jJJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_94" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-1I-PDG">
@@ -450,13 +409,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xc-wk-ee9">
-                                            <rect key="frame" x="101" y="13" width="214.5" height="0.0"/>
+                                            <rect key="frame" x="101" y="13" width="214" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.26379796862602234" green="0.2637900710105896" blue="0.26379451155662537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.20277708768844604" green="0.20276418328285217" blue="0.20277169346809387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL8-JC-IWe">
-                                            <rect key="frame" x="101" y="8" width="214" height="0.0"/>
+                                            <rect key="frame" x="101" y="8" width="214.5" height="0.0"/>
                                             <attributedString key="attributedText"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -494,7 +453,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJo-xw-wuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2892" y="3443"/>
+            <point key="canvasLocation" x="1905" y="2684"/>
         </scene>
         <!--Add Wallet Table View Controller-->
         <scene sceneID="jqd-yc-kos">
@@ -511,7 +470,7 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ykn-2l-1r1" id="Atc-Od-Hf8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="24Y-7V-7sa">
@@ -551,7 +510,7 @@
                                         <rect key="frame" x="0.0" y="101" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJS-lE-ufe" id="g2u-sn-12h">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số tiền hiện có" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-bf-iBf">
@@ -561,7 +520,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="03J-4n-2xp">
                                                     <rect key="frame" x="86" y="19" width="281" height="55"/>
-                                                    <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.99994051456451416" blue="0.99998033046722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -596,13 +555,13 @@
                                         <rect key="frame" x="0.0" y="202" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zxf-vp-hyf" id="uCo-Is-yUA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lưu ví" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-kN-p4p">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.24414443969726562" green="1" blue="0.095018103718757629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.23650801181793213" green="1" blue="0.081124156713485718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -638,14 +597,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahY-ZW-aqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4202" y="3442"/>
+            <point key="canvasLocation" x="2809" y="3440"/>
         </scene>
         <!--Change Password-->
         <scene sceneID="L8G-0R-ad7">
             <objects>
                 <tableViewController id="0tG-3D-E8e" customClass="ChangePasswordTableViewController" customModule="MoneyLover" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="50" sectionFooterHeight="18" id="csy-Ri-ZBP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -655,7 +614,7 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OyS-b5-aHY" id="LXc-gf-IId">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu cũ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHF-Vu-1C0">
@@ -677,7 +636,7 @@
                                         <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jWv-m5-PDW" id="jYQ-Cn-4Mp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu mới" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-7J-Gvn">
@@ -703,13 +662,13 @@
                                         <rect key="frame" x="0.0" y="191" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cjc-CW-GTP" id="I7C-ya-Aug">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-N3-9pM">
                                                     <rect key="frame" x="-0.5" y="8" width="375" height="30"/>
                                                     <state key="normal" title="Lưu mật khẩu mới">
-                                                        <color key="titleColor" red="0.13559842109680176" green="0.65685486793518066" blue="0.23219004273414612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.1332656592130661" green="0.60790467262268066" blue="0.17751142382621765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="saveAction:" destination="0tG-3D-E8e" eventType="touchUpInside" id="NKm-gY-lAC"/>
@@ -740,7 +699,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oD3-Gf-Klr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2871" y="4332"/>
+            <point key="canvasLocation" x="1905" y="3441"/>
         </scene>
     </scenes>
     <resources>

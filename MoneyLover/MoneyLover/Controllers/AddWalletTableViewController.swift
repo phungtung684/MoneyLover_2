@@ -31,7 +31,6 @@ class AddWalletTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(imageTapped))
         iconImageView?.userInteractionEnabled = true
         iconImageView?.addGestureRecognizer(tapGestureRecognizer)

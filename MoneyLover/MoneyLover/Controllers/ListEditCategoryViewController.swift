@@ -16,11 +16,31 @@ class ListEditCategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Categories"
+        self.title = NSLocalizedString("CategoryTitle", comment: "")
         tableView?.delegate = self
         tableView?.dataSource = self
-        let buttonAdd = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(addAction))
-        navigationItem.rightBarButtonItem = buttonAdd
+        let image = UIImage(named: "icon_94")
+        let button = UIButton()
+        button.setImage(image, forState: .Normal)
+        button.addTarget(self, action: #selector(walletButtonAction), forControlEvents: .TouchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        button.round(15, borderWith: 1, borderColor: UIColor.blackColor().CGColor)
+        button.layer.masksToBounds = true
+        let walletButton = UIBarButtonItem(customView: button)
+        let buttonAdd = UIBarButtonItem(title: "Thêm", style: .Plain, target: self, action: #selector(addAction))
+        navigationItem.rightBarButtonItems = [buttonAdd, walletButton]
+    }
+    
+    @objc func walletButtonAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let selectWalletTableController = storyboard.instantiateViewControllerWithIdentifier("SelectWalletTableController") as? SelectWalletTableViewController {
+            let navigationController = UINavigationController(rootViewController: selectWalletTableController)
+            navigationController.navigationBar.translucent = false
+            navigationController.navigationBar.barStyle = .BlackTranslucent
+            navigationController.navigationBar.barTintColor = UIColor(red: 39.0 / 255, green: 186.0 / 255, blue: 85.0 / 255, alpha: 1)
+            navigationController.navigationBar.tintColor = UIColor(red: 4.0 / 255, green: 76.0 / 255, blue: 49.0 / 255, alpha: 1)
+            self.navigationController?.presentViewController(navigationController, animated: true, completion: nil)
+        }
     }
     
     @objc private func addAction() {

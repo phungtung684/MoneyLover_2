@@ -106,13 +106,11 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     private func showMainStoryboard() {
-        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            if let home = mainStoryboard.instantiateViewControllerWithIdentifier("TabbarController") as? UITabBarController {
-                appDelegate.window?.rootViewController = home
-                appDelegate.window?.makeKeyAndVisible()
-                LoadingIndicatorView.hide()
-            }
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let home = mainStoryboard.instantiateViewControllerWithIdentifier("TabbarController") as? UITabBarController {
+            let nav = UINavigationController(rootViewController: home)
+            self.presentViewController(nav, animated: true, completion: nil)
+            LoadingIndicatorView.hide()
         }
     }
 }

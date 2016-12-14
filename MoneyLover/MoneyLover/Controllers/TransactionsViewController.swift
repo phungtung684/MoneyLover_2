@@ -27,7 +27,6 @@ class TransactionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationbarAndTabbarStyle()
         self.tabBarController?.delegate = self
         self.configScrollView()
         self.addTableToView()
@@ -35,14 +34,6 @@ class TransactionsViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    private func navigationbarAndTabbarStyle() {
-        self.tabBarController?.tabBar.tintColor = UIColor(red: 30.0 / 255, green: 188.0 / 255, blue: 94.0 / 255, alpha: 1)
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 30.0 / 255, green: 188.0 / 255, blue: 94.0 / 255, alpha: 1)
-        self.navigationController?.navigationBar.barStyle = .BlackTranslucent
     }
     
     private func configScrollView() {
@@ -128,7 +119,7 @@ extension TransactionsViewController: UIScrollViewDelegate {
             // or the last if we have reached the beginning.
             prevIndex = (currIndex == 0) ? 3 : currIndex - 1
             self.loadTableWithID(currIndex, onTableIndex: 0)
-        }     
+        }
         // Reset offset back to middle page
         scrollView.scrollRectToVisible(CGRect(x: scrollViewRect.size.width, y: 0, width: scrollViewRect.size.width, height: scrollViewRect.size.height), animated: false)
     }
@@ -226,12 +217,18 @@ extension TransactionsViewController: UITableViewDelegate {
 
 extension TransactionsViewController: UITabBarControllerDelegate {
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        if tabBarController.tabBarItem.tag == 1 {
-            print(tabBarController.selectedIndex)
-            if let addNewTransactionVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddNewTransactionVC") as? AddNewTransactionViewController {
-                let navController = UINavigationController(rootViewController: addNewTransactionVC)
-                self.presentViewController(navController, animated: true, completion: nil)
+        if tabBarController.selectedIndex == 2 {
+            let storyBoard: UIStoryboard? = UIStoryboard(name: "AddTransaction", bundle: nil)
+            if let addTransaction = storyBoard?.instantiateViewControllerWithIdentifier("AddTransactionViewController") as? AddTransactionViewController {
+                let navigationController = UINavigationController(rootViewController: addTransaction)
+                navigationController.navigationBar.translucent = false
+                navigationController.navigationBar.barStyle = .BlackTranslucent
+                navigationController.navigationBar.barTintColor = UIColor.whiteColor()
+                navigationController.navigationBar.tintColor = UIColor(red: 4.0 / 255, green: 76.0 / 255, blue: 49.0 / 255, alpha: 1)
+                navigationController.navigationBar.barTintColor = UIColor(red: 39.0 / 255, green: 186.0 / 255, blue: 85.0 / 255, alpha: 1)
+                self.navigationController?.presentViewController(navigationController, animated: true, completion: nil)
             }
         }
+        
     }
 }
