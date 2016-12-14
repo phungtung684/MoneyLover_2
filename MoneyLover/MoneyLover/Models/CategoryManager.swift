@@ -12,6 +12,7 @@ class CategoryManager: NSObject {
     
     lazy var managedObjectContext = CoreDataManager().managedObjectContext
     var dataStored = DataStored()
+    var listCategoryAvailable = ListCategoryAvailable()
     
     func checkCategoryExisted(name: String) -> Bool {
         let listCategory = dataStored.fetchRecordsForEntity("Category", inManagedObjectContext: managedObjectContext)
@@ -99,5 +100,39 @@ class CategoryManager: NSObject {
             }
         }
         return nil
+    }
+    func addCategoryDefault() {
+        for item in listCategoryAvailable.listCategory {
+            if let category = dataStored.createRecordForEntity("Category", inManagedObjectContext: managedObjectContext) as? Category {
+                category.icon = item.iconCategory
+                category.name = item.nameCategory
+                category.type = item.typeCategory.hashValue
+                category.idCategory = item.idCategory
+                do {
+                    try managedObjectContext.save()
+                } catch let error {
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    
+    func getAllCategory() -> [Int: [CategoryModel]] {
+        var dictData = [0: [CategoryModel](), 1: [CategoryModel](), 2: [CategoryModel]()]
+        let categories = dataStored.fetchRecordsForEntity("Category", inManagedObjectContext: managedObjectContext)
+        for item in categories {
+            if let category = item as? Category {
+                let categoryModel = CategoryModel(category: category)
+                if categoryModel.typeCategory == .income {
+                    dictData[2]?.append(categoryModel)
+                } else if categoryModel.typeCategory == .deptLoan {
+                    dictData[0]?.append(categoryModel)
+                } else {
+                    dictData[1]?.append(categoryModel)
+                }
+            }
+        }
+        return dictData
     }
 }

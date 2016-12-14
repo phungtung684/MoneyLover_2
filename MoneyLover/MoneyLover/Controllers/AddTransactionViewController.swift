@@ -46,7 +46,7 @@ class AddTransactionViewController: UITableViewController {
                 if let amount = Double(amount) {
                     transactionModel.amount = amount
                     if transactionManager.addTransaction(transactionModel) {
-                        self.presentAlertWithTitle("Success", message: "OK.")
+                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
                 } else {
                     self.presentAlertWithTitle("Error", message: "ReEnter Amount")

@@ -25,12 +25,12 @@ class AddCategoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let category = category {
-            self.title = "Edit Category"
+            self.title = NSLocalizedString("TitleEditCategory", comment: "")
             inputNameTextField?.text = category.nameCategory
             typeCategorySegmentedControl?.selectedSegmentIndex = category.getTypeInt()
             iconCategoryImageView?.image = UIImage(named: category.iconCategory)
         } else {
-            self.title = "New Category"
+            self.title = NSLocalizedString("TitleAddCategory", comment: "")
         }
         let buttonSave = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: #selector(saveAction))
         let buttonCancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(cancelAction))

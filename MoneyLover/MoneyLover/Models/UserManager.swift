@@ -14,6 +14,7 @@ class UserManager: NSObject {
     var dataStored = DataStored()
     var listWalletAvailable = ListWalletAvalable()
     var walletManager = WalletManager()
+    var categoryManager = CategoryManager()
     
     func checkUserExisted(email: String) -> Bool {
         Defaults.userID.set(email)
@@ -51,6 +52,7 @@ class UserManager: NSObject {
             user.currentWallet = "215C0B02-4270-43F6-A273-B743869CD2AD"
             do {
                 self.walletManager.addWalletDefault()
+                self.categoryManager.addCategoryDefault()
                 try managedObjectContext.save()
                 self.removeUserIDDefaults()
                 return true
@@ -70,6 +72,7 @@ class UserManager: NSObject {
             Defaults.currentWalletId.set("215C0B02-4270-43F6-A273-B743869CD2AD")
             do {
                 self.walletManager.addWalletDefault()
+                self.categoryManager.addCategoryDefault()
                 try managedObjectContext.save()
                 return true
             } catch {

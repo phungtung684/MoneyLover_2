@@ -12,6 +12,10 @@ protocol DeleteCategoryDelegate: class {
     func didDeleteCategory(indexPath: NSIndexPath?)
 }
 
+protocol ReloadDataDelegate: class {
+    func reloadTableWithOjec(category: CategoryModel, indexPath: NSIndexPath)
+}
+
 class DetailCategoryViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +23,7 @@ class DetailCategoryViewController: UIViewController {
     let listCell = ListCellViewDetailCategory()
     var categoryManager = CategoryManager()
     weak var delegate: DeleteCategoryDelegate?
+    weak var reloadDelegate: ReloadDataDelegate?
     var indexPath: NSIndexPath?
     
     override func viewDidLoad() {
@@ -32,6 +37,10 @@ class DetailCategoryViewController: UIViewController {
     @objc private func editAction() {
         if let addCategoryViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AddCategoryViewController") as? AddCategoryViewController {
             let navController = UINavigationController(rootViewController: addCategoryViewController)
+            navController.navigationBar.translucent = false
+            navController.navigationBar.barStyle = .BlackTranslucent
+            navController.navigationBar.barTintColor = UIColor(red: 39.0 / 255, green: 186.0 / 255, blue: 85.0 / 255, alpha: 1)
+            navController.navigationBar.tintColor = UIColor(red: 4.0 / 255, green: 76.0 / 255, blue: 49.0 / 255, alpha: 1)
             addCategoryViewController.delegate = self
             addCategoryViewController.category = category
             self.presentViewController(navController, animated:true, completion: nil)
@@ -85,6 +94,7 @@ extension DetailCategoryViewController: UITableViewDelegate {
 
 extension DetailCategoryViewController: SaveCategoryDelegate {
     func didSaveCategory(category: CategoryModel) {
+        self.reloadDelegate?.reloadTableWithOjec(category, indexPath: indexPath ?? NSIndexPath())
         self.category = category
         self.tableView?.reloadData()
     }

@@ -24,6 +24,7 @@ class TransactionsViewController: UIViewController {
     var currIndex = 2
     var nextIndex = 3
     @IBOutlet weak var scrollViewContent: UIScrollView!
+    var lastSelectIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,13 +87,13 @@ class TransactionsViewController: UIViewController {
     private func loadTableWithID(index: Int, onTableIndex: Int) {
         if index == 1 {
             str = "Table 1"
-            tableView1.reloadData()
+//            tableView1.reloadData()
         } else if index == 2 {
             str = "Table 2"
-            tableView2.reloadData()
+//            tableView2.reloadData()
         } else {
             str = "Table 3"
-            tableView3.reloadData()
+//            tableView3.reloadData()
         }
     }
 }
@@ -127,7 +128,7 @@ extension TransactionsViewController: UIScrollViewDelegate {
             self.loadTableWithID(currIndex, onTableIndex: 0)
         }
         // Reset offset back to middle page
-        scrollView.scrollRectToVisible(CGRect(x: scrollViewRect.size.width, y: 0, width: scrollViewRect.size.width, height: scrollViewRect.size.height), animated: false)
+//        scrollView.scrollRectToVisible(CGRect(x: scrollViewRect.size.width, y: 0, width: scrollViewRect.size.width, height: scrollViewRect.size.height), animated: false)
     }
 }
 
@@ -224,17 +225,20 @@ extension TransactionsViewController: UITableViewDelegate {
 extension TransactionsViewController: UITabBarControllerDelegate {
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         if tabBarController.selectedIndex == 2 {
+            self.tabBarController?.selectedIndex = self.lastSelectIndex
             let storyBoard: UIStoryboard? = UIStoryboard(name: "AddTransaction", bundle: nil)
             if let addTransaction = storyBoard?.instantiateViewControllerWithIdentifier("AddTransactionViewController") as? AddTransactionViewController {
                 let navigationController = UINavigationController(rootViewController: addTransaction)
                 navigationController.navigationBar.translucent = false
                 navigationController.navigationBar.barStyle = .BlackTranslucent
                 navigationController.navigationBar.barTintColor = UIColor.whiteColor()
-                navigationController.navigationBar.tintColor = UIColor(red: 4.0 / 255, green: 76.0 / 255, blue: 49.0 / 255, alpha: 1)
-                navigationController.navigationBar.barTintColor = UIColor(red: 39.0 / 255, green: 186.0 / 255, blue: 85.0 / 255, alpha: 1)
+                navigationController.navigationBar.tintColor = UIColor(red: 4, green: 76, blue: 49)
+                navigationController.navigationBar.barTintColor = UIColor(red: 39, green: 186, blue: 85)
                 self.navigationController?.presentViewController(navigationController, animated: true, completion: nil)
             }
+        } else {
+            self.lastSelectIndex = self.tabBarController?.selectedIndex ?? 0
         }
-        
+        print(self.lastSelectIndex)
     }
 }

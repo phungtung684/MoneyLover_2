@@ -5,3 +5,34 @@
   Created by Phùng Tùng on 12/5/16.
   Copyright © 2016 Phùng Tùng. All rights reserved.
 */
+ButtonTitleLogout = "Đăng xuất";
+ButtonTitleCancel = "Hủy";
+ButtonTitleOK = "OK";
+LogoutConfirmTitle = "Nhắc nhở";
+LogoutConfirmMessage = "Bạn có thực sự muốn đăng xuất không?";
+TitleLoadingIndicator = "Đang đọc dữ liệu...";
+TitleAccount = "Tài khoản";
+TitleChangePassword = "Thay đổi mật khẩu";
+TitleChooseWallet = "Ví của tôi";
+AlertWrongPasswordMessage = "Bạn đã nhập sai mật khẩu cũ!";
+ErrorAlertTitle = "Lỗi";
+AlertMessagePasswordEmpty = "Mật khẩu Mới không được trống";
+AlertMessagePasswordLetters = "Mật khấu phải nhiều hơn 6 kí tự";
+AlertMessagePasswordInvalid = "Mật khẩu không hợp lệ";
+AlertMessageOldPassword = "Mật khẩu cũ không được trống";
+AlertTitleMessage = "Thông báo";
+MessageAlertChangePasswordSuccess = "Thay đổi mật khẩu thành công. Bạn vui lòng đăng nhập lại";
+MessageAlertNameWalletExits = "Tên ví đã tồn tại";
+MessageAlertErrorAddWallet = "Không thể thêm mới dữ liệu";
+HeaderTitleChooseWallet = "TÍNH VÀO TỔNG";
+ActionDeleteCellTitle = "Xóa";
+ActionSaveCellTitle = "Lưu";
+AddTransantionTitle = "Thêm giao dịch";
+ChooseWalletTitle = "Chọn ví";
+ChooseCategoryTitle = "Chọn Nhóm";
+CategoryTitle = "Nhóm";
+Total = "Tổng Cộng";
+TitleActionCell = "Thêm ví";
+TitleEditWallet = "Sửa thông tin ví";
+TitleAddCategory = "Thêm nhóm";
+TitleEditCategory = "Sửa nhóm";

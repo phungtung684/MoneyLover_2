@@ -34,3 +34,5 @@ CategoryTitle = "Nhóm";
 Total = "Tổng Cộng";
 TitleActionCell = "Thêm ví";
 TitleEditWallet = "Sửa thông tin ví";
+TitleAddCategory = "Thêm nhóm";
+TitleEditCategory = "Sửa nhóm";

@@ -10,7 +10,6 @@ import UIKit
 
 class TabbarViewController: UITabBarController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationStyle()
@@ -55,6 +54,7 @@ class TabbarViewController: UITabBarController {
 
 extension TabbarViewController: ChangeCurrentWalletDelegate {
     func changeCurrentWallet(walletModel: WalletModel) {
+        Defaults.currentWalletId.set(walletModel.idWallet)
         self.addWalletBarButtonItem(walletModel.iconName)
     }
 }
