@@ -65,16 +65,15 @@ class AddTransactionViewController: UITableViewController {
         if let transaction = transaction {
             print("show information \(transaction)")
         } else {
-            self.title = "Add Transaction"
+            self.title = NSLocalizedString("TitleActionCell", comment: "")
         }
         let buttonSave = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: #selector(saveAction))
         let buttonCancel = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(cancelAction))
         navigationItem.rightBarButtonItem = buttonSave
         navigationItem.leftBarButtonItem = buttonCancel
-        self.navigationController?.navigationBar.tintColor = UIColor.greenColor()
         self.dateLabel?.text = dateCurrent.getFormatDate()
         inputAmountTextField?.keyboardType = .NumberPad
-        if let walletModel = walletManager.showWalletDefault() {
+        if let walletModel = walletManager.getWalletByID(Defaults.currentWalletId.getString() ?? "") {
             wallet = walletModel
             iconWalletImageView?.image = UIImage(named: walletModel.iconName)
             nameWalletLabel?.text = walletModel.name
@@ -116,24 +115,23 @@ extension AddTransactionViewController {
         if indexPath.row == 6 {
             let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
             if let chooseWalletVC = storyBoard?.instantiateViewControllerWithIdentifier("ChooseWalletTVC") as? ChooseWalletTableViewController {
-                chooseWalletVC.checkIsFromViewAddTransaction = true
-                chooseWalletVC.delegate = self
+//                chooseWalletVC.delegate = self
                 self.navigationController?.pushViewController(chooseWalletVC, animated: true)
             }
         }
     }
 }
 
-extension AddTransactionViewController: ChooseWalletDelegate {
-    func didChooseWallet(walletModel: WalletModel?) {
-        if let walletModel = walletModel {
-            wallet = walletModel
-            iconWalletImageView?.image = UIImage(named: walletModel.iconName)
-            nameWalletLabel?.textColor = UIColor.blackColor()
-            nameWalletLabel?.text = walletModel.name
-        }
-    }
-}
+//extension AddTransactionViewController: ChooseWalletDelegate {
+//    func didChooseWallet(walletModel: WalletModel?) {
+//        if let walletModel = walletModel {
+//            wallet = walletModel
+//            iconWalletImageView?.image = UIImage(named: walletModel.iconName)
+//            nameWalletLabel?.textColor = UIColor.blackColor()
+//            nameWalletLabel?.text = walletModel.name
+//        }
+//    }
+//}
 
 extension AddTransactionViewController: ChooseCategoryDelegate {
     func didChooseCategory(categoryModel: CategoryModel?) {

@@ -28,8 +28,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("userID")
-        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     private func setupView() {
@@ -67,9 +65,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 if let userFb = result as? [String: String] {
                     let email =  userFb["email"] ?? ""
                     if self.userManager.checkUserExisted(email) {
-                        if self.userManager.checkUserLoginSocial(email) {
-                            self.showMainStoryboard()
-                        }
+                        Defaults.userID.set(email)
+                        self.showMainStoryboard()
                     } else {
                         if self.userManager.addUserFromSocial(email) {
                             self.showMainStoryboard()
@@ -119,9 +116,8 @@ extension LoginViewController: GIDSignInDelegate {
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
         if error == nil {
             if self.userManager.checkUserExisted(user.profile.email) {
-                if self.userManager.checkUserLoginSocial(user.profile.email) {
-                    self.showMainStoryboard()
-                }
+                Defaults.userID.set(user.profile.email)
+                self.showMainStoryboard()
             } else {
                 if self.userManager.addUserFromSocial(user.profile.email) {
                     self.showMainStoryboard()

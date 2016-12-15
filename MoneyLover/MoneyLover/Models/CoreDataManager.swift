@@ -25,7 +25,7 @@ class CoreDataManager: NSObject {
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         var url: NSURL?
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID") {
+        if let userID = Defaults.userID.getString() {
             url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("\(userID)_SingleViewCoreData.sqlite")
         } else {
             url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")

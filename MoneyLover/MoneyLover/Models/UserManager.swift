@@ -12,58 +12,64 @@ class UserManager: NSObject {
     
     lazy var managedObjectContext = CoreDataManager().managedObjectContext
     var dataStored = DataStored()
-    var walletManager = WalletManager()
     var listWalletAvailable = ListWalletAvalable()
+    var walletManager = WalletManager()
     
     func checkUserExisted(email: String) -> Bool {
+        Defaults.userID.set(email)
         let listUser = dataStored.fetchAttributePredicate("User", attribute: "email", stringPredicate: email, inManagedObjectContext: managedObjectContext)
         if listUser.count == 0 {
+            self.removeUserIDDefaults()
             return false
         }
+        self.removeUserIDDefaults()
         return true
     }
     
     func checkUserLogin(email: String, password: String) -> Bool {
-        let listUser = dataStored.fetchRecordsForEntity("User", inManagedObjectContext: managedObjectContext)
-        for users in listUser {
-            if let user = users as? User {
-                if user.email == email && user.password == password {
-                    if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID") {
-                        if userID == user.email {
-                            return true
-                        } else {
-                            NSUserDefaults.standardUserDefaults().setValue(user.email, forKey: "userID")
-                            return true
-                        }
-                    } else {
-                        NSUserDefaults.standardUserDefaults().setValue(user.email, forKey: "userID")
-                        return true
-                    }
-                }
+        Defaults.userID.set(email)
+        let users = dataStored.fetchAttributePredicate("User", attribute: "email", stringPredicate: email, inManagedObjectContext: managedObjectContext)
+        if users.count == 1 {
+            guard let user = users.first as? User else {
+                self.removeUserIDDefaults()
+                return false
+            }
+            if user.password == password {
+                Defaults.currentWalletId.set(user.currentWallet)
+                return true
             }
         }
+        self.removeUserIDDefaults()
         return false
     }
     
     func addUser(email: String, password: String) -> Bool {
+        Defaults.userID.set(email)
         if let user = dataStored.createRecordForEntity("User", inManagedObjectContext: managedObjectContext) as? User {
             user.email = email
             user.password = password
+            user.currentWallet = "215C0B02-4270-43F6-A273-B743869CD2AD"
             do {
+                self.walletManager.addWalletDefault()
                 try managedObjectContext.save()
+                self.removeUserIDDefaults()
                 return true
             } catch {
                 return false
             }
         }
+        self.removeUserIDDefaults()
         return false
     }
     
     func addUserFromSocial(email: String) -> Bool {
+        Defaults.userID.set(email)
         if let user = dataStored.createRecordForEntity("User", inManagedObjectContext: managedObjectContext) as? User {
             user.email = email
-            NSUserDefaults.standardUserDefaults().setValue(user.email, forKey: "userID")
+            user.currentWallet = "215C0B02-4270-43F6-A273-B743869CD2AD"
+            Defaults.currentWalletId.set("215C0B02-4270-43F6-A273-B743869CD2AD")
             do {
+                self.walletManager.addWalletDefault()
                 try managedObjectContext.save()
                 return true
             } catch {
@@ -73,58 +79,21 @@ class UserManager: NSObject {
         return false
     }
     
-    func createWalletDefaultForRegister() {
-        for wallet in listWalletAvailable.listWallet {
-            walletManager.addWalletAvailable(wallet)
-        }
-    }
-    
-    func checkUserLoginSocial(email: String) -> Bool {
-        let listUser = dataStored.fetchRecordsForEntity("User", inManagedObjectContext: managedObjectContext)
-        for users in listUser {
-            if let user = users as? User {
-                if user.email == email {
-                    if let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID") {
-                        if userID == user.email {
-                            return true
-                        } else {
-                            NSUserDefaults.standardUserDefaults().setValue(user.email, forKey: "userID")
-                            return true
-                        }
-                    } else {
-                        NSUserDefaults.standardUserDefaults().setValue(user.email, forKey: "userID")
-                        return true
-                    }
-                }
-            }
-        }
-        return false
-    }
-    
-    func logout() {
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("userID")
+    func removeUserIDDefaults() {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("UserID")
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     func changePassword(oldPassword: String, newPassword: String) -> Bool {
-        guard let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID") else {
-            return false
-        }
-        self.logout()
-        let listUser = dataStored.fetchRecordsForEntity("User", inManagedObjectContext: managedObjectContext)
-        for users in listUser {
-            if let user = users as? User {
-                if userID == user.email {
-                    if user.password == oldPassword {
-                        user.password = newPassword
-                        do {
-                            try managedObjectContext.save()
-                            NSUserDefaults.standardUserDefaults().setValue(userID, forKey: "userID")
-                            return true
-                        } catch {
-                            return false
-                        }
-                    } else {
+        let users = dataStored.fetchAttributePredicate("User", attribute: "email", stringPredicate: Defaults.userID.getString() ?? "", inManagedObjectContext: managedObjectContext)
+        if users.count == 1 {
+            if let user = users.first as? User {
+                if user.password == oldPassword {
+                    user.password = newPassword
+                    do {
+                        try managedObjectContext.save()
+                        return true
+                    } catch {
                         return false
                     }
                 }

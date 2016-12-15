@@ -2,12 +2,14 @@
 //  User+CoreDataClass.swift
 //  MoneyLover
 //
-//  Created by Ngo Sy Truong on 11/23/16.
+//  Created by Phùng Tùng on 12/14/16.
 //  Copyright © 2016 Phùng Tùng. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class User: NSManagedObject {
+
+public class User: NSManagedObject {
+
 }

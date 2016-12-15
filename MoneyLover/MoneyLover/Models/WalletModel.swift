@@ -30,7 +30,8 @@ class WalletModel: NSObject {
 class ListWalletAvalable {
     var listWallet = [WalletModel]()
     init() {
-        listWallet.append(WalletModel(name: "ATM", idWallet: NSUUID().UUIDString, iconName: "icon_94", amount: 0.0))
+//        listWallet.append(WalletModel(name: "Tổng cộng", idWallet: NSUUID().UUIDString, iconName: "ic_category_all", amount: 0.0))
+        listWallet.append(WalletModel(name: "ATM", idWallet: "215C0B02-4270-43F6-A273-B743869CD2AD", iconName: "icon_94", amount: 0.0))
         listWallet.append(WalletModel(name: "Tiền mặt", idWallet: NSUUID().UUIDString, iconName: "icon_117", amount: 0.0))
     }
 }

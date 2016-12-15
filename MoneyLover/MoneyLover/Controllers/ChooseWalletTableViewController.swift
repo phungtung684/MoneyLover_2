@@ -8,44 +8,24 @@
 
 import UIKit
 
-protocol ChooseWalletDelegate: class {
-    func didChooseWallet(walletModel: WalletModel?)
+protocol ReloadDataFromChooseWalletDelegate: class {
+    func reloadDataFromChooseWallet()
 }
 
 class ChooseWalletTableViewController: UITableViewController {
     
     var dataWallet = [WalletModel]()
-    var dataStored = DataStored()
     var walletManager = WalletManager()
-    lazy var managedObjectContext = CoreDataManager().managedObjectContext
-    weak var delegate: ChooseWalletDelegate?
-    var checkIsFromViewAddTransaction = false
+    weak var delegate: ReloadDataFromChooseWalletDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("TitleChooseWallet", comment: "")
-        self.getdataFromDB()
+        dataWallet.appendContentsOf(self.walletManager.getAllWallet())
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func getdataFromDB() {
-        let listWallet = dataStored.fetchRecordsForEntity("Wallet", inManagedObjectContext: managedObjectContext)
-        if listWallet.count == 0 {
-            for wallet in ListWalletAvalable().listWallet {
-                if let w = walletManager.addWalletAvailable(wallet) {
-                    dataWallet.append(WalletModel(wallet: w))
-                }
-            }
-        } else {
-            for item in listWallet {
-                if let wallet = item as? Wallet {
-                    dataWallet.append(WalletModel(wallet: wallet))
-                }
-            }
-        }
     }
     
     @IBAction func addAction(sender: AnyObject) {
@@ -81,35 +61,19 @@ class ChooseWalletTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.selected = false
-        if checkIsFromViewAddTransaction {
-            self.delegate?.didChooseWallet(dataWallet[indexPath.row])
-            self.navigationController?.popViewControllerAnimated(true)
-        } else {
-            if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
-                addWalletVC.delegate  = self
-                addWalletVC.wallet = dataWallet[indexPath.row]
-                addWalletVC.indexPath = indexPath
-                self.navigationController?.pushViewController(addWalletVC, animated: true)
-            }
+        if let addWalletVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddWalletViewcontroller") as? AddWalletTableViewController {
+            addWalletVC.delegate  = self
+            addWalletVC.wallet = dataWallet[indexPath.row]
+            self.navigationController?.pushViewController(addWalletVC, animated: true)
         }
     }
 }
 
-extension ChooseWalletTableViewController: AddWalletTableViewControllerDelegate {
+extension ChooseWalletTableViewController: ReloadDataFromAddWalletTVCDelegate {
     func reloadData() {
-        dispatch_async(dispatch_get_main_queue(), {
-            self.dataWallet.removeAll()
-            self.getdataFromDB()
-            self.tableView.reloadData()
-        })
-    }
-}
-
-extension ChooseWalletTableViewController: DeleteWalletDelegate {
-    func didDeleteWallet(indexPath: NSIndexPath?) {
-        if let indexPathDelete = indexPath {
-            dataWallet.removeAtIndex(indexPathDelete.row)
-            self.tableView.reloadData()
-        }
+        self.dataWallet.removeAll()
+        self.dataWallet.appendContentsOf(self.walletManager.getAllWallet())
+        self.tableView.reloadData()
+        self.delegate?.reloadDataFromChooseWallet()
     }
 }

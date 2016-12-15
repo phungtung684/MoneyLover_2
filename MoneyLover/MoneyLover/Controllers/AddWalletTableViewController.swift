@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AddWalletTableViewControllerDelegate: class {
+protocol ReloadDataFromAddWalletTVCDelegate: class {
     func reloadData()
 }
 
@@ -24,18 +24,18 @@ class AddWalletTableViewController: UITableViewController {
     @IBOutlet weak var iconImageView: UIImageView!
     var nameIcon = "icon_109"
     var walletManager = WalletManager()
-    weak var delegate: AddWalletTableViewControllerDelegate?
-    weak var deleteDelegate: DeleteWalletDelegate?
+    weak var delegate: ReloadDataFromAddWalletTVCDelegate?
     var wallet: WalletModel?
-    var indexPath: NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = NSLocalizedString("TitleActionCell", comment: "")
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(imageTapped))
         iconImageView?.userInteractionEnabled = true
         iconImageView?.addGestureRecognizer(tapGestureRecognizer)
         actionCellLabel?.text = NSLocalizedString("ActionSaveCellTitle", comment: "")
         if wallet != nil {
+            self.title = NSLocalizedString("TitleEditWallet", comment: "")
             nameIcon = wallet?.iconName ?? "icon_109"
             nameWalletTextField?.text = wallet?.name
             iconImageView?.image = UIImage(named: wallet?.iconName ?? "icon_109")
